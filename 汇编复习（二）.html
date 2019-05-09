@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="BRlg7lKtUTIEoZlZoTpoofRH2uS5V_bncuLOIoxPcwM">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+  
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="keywords" content="温故知新">
+<meta property="og:type" content="article">
+<meta property="og:title" content="汇编复习（二）">
+<meta property="og:url" content="https://celestialcode.xyz/汇编复习（二）.html">
+<meta property="og:site_name" content="Celestialalpha">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://celestialcode.xyz/uploads/gaitubao_680x360_WordItOut-word-cloud-3710871.jpg">
+<meta property="og:image" content="https://celestialcode.xyz/uploads/stack_view.jpg">
+<meta property="og:updated_time" content="2019-05-08T18:36:16.173Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="汇编复习（二）">
+<meta name="twitter:image" content="https://celestialcode.xyz/uploads/gaitubao_680x360_WordItOut-word-cloud-3710871.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Celestialalpha" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://celestialcode.xyz/汇编复习（二）">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>汇编复习（二） | Celestialalpha</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Celestialalpha</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">8</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">5</span></a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://celestialcode.xyz/汇编复习（二）.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="celestialalpha">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Celestialalpha">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">汇编复习（二）
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-26 22:28:53" itemprop="dateCreated datePublished" datetime="2019-03-26T22:28:53+08:00">2019-03-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-09 02:36:16" itemprop="dateModified" datetime="2019-05-09T02:36:16+08:00">2019-05-09</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/汇编/" itemprop="url" rel="index"><span itemprop="name">汇编</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="/uploads/gaitubao_680x360_WordItOut-word-cloud-3710871.jpg" alt><br><a id="more"></a></p>
+<h1 id="汇编指令"><a href="#汇编指令" class="headerlink" title="汇编指令"></a>汇编指令</h1><p>汇编指令由两部分组成</p>
+<ul>
+<li>操作码</li>
+<li>操作数</li>
+</ul>
+<p>其中操作码必须有，而操作数可以有一个或两个，也可以没有。<br>零操作数指令或一个的，另外的操作数是隐含的。比如push指令，<br></p><figure class="highlight armasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">push </span><span class="keyword">bx	</span><span class="comment">;将栈顶的值推到bx中，栈顶的值就是另一个隐含的操作数</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h1 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h1><p>寻址的意思是，寻找操作数所存放的位置（地址）。<br>一共有<strong>7种寻址方式，它们是：</strong></p>
+<ul>
+<li><p>立即数寻址</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="number">10h</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>寄存器寻址</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="built_in">bx</span></span><br><span class="line"><span class="keyword">inc</span> <span class="built_in">cx</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>存储器寻址（5种）<br>存储器指内存和IO端口。</p>
+</li>
+</ul>
+<ol>
+<li><p>直接寻址<br>操作数在内存中，操作数的偏移地址直接表示在指令中。</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">al</span>, [<span class="number">1064h</span>]  <span class="comment">;默认操作数存放在数据段</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">al</span>, <span class="built_in">es</span>:[<span class="number">1064h</span>]  <span class="comment">;指明段超越ES</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>间接寻址<br>操作数存储在存储器中，操作数的偏移地址在BX、SI、DI和BP的某个寄存器中。<br>若以BX、SI、DI作为间接寻址寄存器，默认操作数存放在数据段中，用DS寄存；<br>若以BP作为间接寻址寄存器，则默认操作数存储在堆栈段，用SS寄存。<br>和直接寻址一样，简介寻址也可以有段超越。</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>, [<span class="built_in">si</span>]</span><br><span class="line"><span class="keyword">mov</span> [<span class="built_in">bx</span>], <span class="built_in">al</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>相对寻址<br>操作数在存储器中，操作数的有效地址是一个基址寄存器（BX、BP）或变址寄存器（SI、DI）的内容加上指令中给定的8位或16位位移量之和。<br>若以BX、SI、DI作为间接寻址寄存器，默认操作数存放在数据段中，用DS寄存；<br>若以BP作为间接寻址寄存器，则默认操作数存储在堆栈段，用SS寄存。这两点和上面一样。</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">cl</span>, [<span class="built_in">bx</span>+<span class="number">1064h</span>]  <span class="comment">;默认数据段</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>基址加变址寻址<br>BX、BP是基址寄存器，DI、SI是变址寄存器。</p>
+<figure class="highlight markdown"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mov ah, [<span class="string">bp</span>][<span class="symbol">si</span>]  ;不论基址还是变址都是偏移地址，根据基地址寄存器找段寄存器</span><br><span class="line"><span class="code">		  ;由bp知，段寄存器是ss，故ah=[ssx10h+bp+si]</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>相对基址加变址寻址<br>在4-基址加变址的基础上，再加上一个偏移量。</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> [<span class="built_in">bx</span>+<span class="built_in">di</span>+<span class="number">1234h</span>], <span class="number">ah</span>  <span class="comment">;[bx+di+1234h]=dsx10h+bx+di+1234h</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ol>
+<h1 id="数据传送指令"><a href="#数据传送指令" class="headerlink" title="数据传送指令"></a>数据传送指令</h1><p>一、 通用传送指令</p>
+<ol>
+<li>基本传送指令mov<figure class="highlight armasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov </span>dst src</span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ol>
+<p>所有传送指令都不影响标志寄存器的标志位。</p>
+<p>mov指令不能实现以下操作：</p>
+<ul>
+<li>存储器和存储器之间不能直接传送，这是错的：<code>mov [1000h], [di]</code></li>
+<li>立即数不能直接送到段寄存器，这是错的：<code>mov ds, 2000h</code></li>
+<li>段寄存器之间不能直接传送，这是错的：<code>mov es, ds</code></li>
+<li>CS不能作为目的操作数，这是错的：<code>mov cs, ax</code></li>
+<li>源操作数和目的操作数的宽度必须相同，这是错的：<code>mov al, 1000h</code></li>
+</ul>
+<ol start="2">
+<li>堆栈指令push和pop<br>堆栈：<strong>后进先出</strong>（Last In First Out）<br><img src="/uploads/stack_view.jpg" alt="堆栈"></li>
+</ol>
+<p>压栈<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">push</span> <span class="built_in">bx</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>出栈<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pop</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">ax</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>堆栈的作用：</p>
+<ul>
+<li>存放寄存器或存储器中暂时不用的数据，需要时可方便的弹出</li>
+<li>调用子程序或发生中断时要保护断点信息，子程序或中断返回时恢复断点信息</li>
+</ul>
+<p>画图时，高地址在下，低地址在上。<br>每次push，ip减少相应长度；每次pop，ip增加相应长度。</p>
+<ol start="3">
+<li>交换指令xchg<br>数据交换指令是实现两个操作数之间的位置互换的指令，这两个操作数可以是两个寄存器操作数，或一个寄存器操作数与一个存储器操作数，或两个存储器操作数，在多处理机制中，也可以是一个寄存器操作数和一个共享存储器操作数。数据交换指令实现了数据的双向传递，一个数据交换指令起到了三条数据传送指令的作用。</li>
+</ol>
+<p>xchg指令只能发生在以下两种情况</p>
+<ul>
+<li>寄存器和寄存器的xchg</li>
+<li>寄存器和存储器的xchg</li>
+</ul>
+<p>公式<br></p><figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xchg dst, src  ;<span class="comment">(dst)</span> <-> <span class="comment">(src)</span></-></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>存储器之间不能直接交换<br>段寄存器不能作为操作数<br>允许字或字节操作</p>
+<p>二、累加器专用传送指令</p>
+<ol>
+<li><p>输入指令IN<br>用于CPU向从外设备端口接收数据</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">in</span> <span class="built_in">al</span>, data8  <span class="comment">;从8位端口地址输入一个字节</span></span><br><span class="line"><span class="keyword">in</span> <span class="built_in">ax</span>, data8  <span class="comment">;从8位端口地址输入一个字</span></span><br><span class="line"><span class="keyword">in</span> <span class="built_in">al</span>, <span class="built_in">dx</span>  <span class="comment">;从16位端口地址输入一个字节</span></span><br><span class="line"><span class="keyword">in</span> <span class="built_in">ax</span>, <span class="built_in">dx</span>  <span class="comment">;从16为端口地址输入一个字</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+<li><p>输出指令OUT<br>用于CPU向外设备端口发送数据</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">out</span> data8, <span class="built_in">al</span>  <span class="comment">;向8位地址端口输出一个字节</span></span><br><span class="line"><span class="keyword">out</span> data8, <span class="built_in">ax</span>  <span class="comment">;向8位地址端口输出一个字</span></span><br><span class="line"><span class="keyword">out</span> <span class="built_in">dx</span>, <span class="built_in">al</span>  <span class="comment">;向16位地址端口输出一个字节</span></span><br><span class="line"><span class="keyword">out</span> <span class="built_in">dx</span>, <span class="built_in">ax</span>  <span class="comment">;向16位地址端口输出一个字</span></span><br></pre></td></tr></tbody></table></figure>
+</li>
+</ol>
+<p>三、目的地址传送指令</p>
+<p>8086CPU提供了三条，分别是</p>
+<ul>
+<li>lea（取偏移地址）</li>
+<li>lds（取数据内容）</li>
+<li>les（取数据内容）</li>
+</ul>
+<p>（1）lea（load effective address）<br>功能：将源操作数的偏移地址传送到目的操作数<br></p><figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lea re<span class="name">g16</span>, mem  ;注：re<span class="name">g16</span>指<span class="number">16</span>位通用寄存器，和上面data<span class="number">8</span>一样，都是简写。</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>设(bx)=0400h，(si)=003ch，<code>lea bx, [bx+si+0f62h]</code><br>执行指令后，源操作数地址为(bx)+(si)+0f62h=0400h+003ch+0f62h=139eh<br>则(bx)=139eh</p>
+<p>（2）lds（load pointer using DS）<br>功能：将源操作数指定的4个相继字节的数据分别传送到指令指定的寄存器和ds中<br></p><figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lds re<span class="name">g16</span>, mem  ;<span class="comment">(reg16)</span><-<span class="comment">(mem)</-<span></span>  <span class="comment">(ds)</span><-<span class="comment">((mem)<span class="number">+2</span>)<br></-<span></pre></td></tr></tbody></table></figure><p></p>
+<p>如 <code>lds si, [0010h]</code>，设(ds)=0c00h，数据在内存中分布情况如下</p>
+<p>偏移地址    0010h    c0011h    c0012h    c0013h<br>数据内容    80h    01h    00h    20h</p>
+<p>则指令执行后，(si)=0180h，(di)=2000h</p>
+<p>（3）les（load pointer using ES）<br>类比LDS。<br></p><figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">les re<span class="name">g16</span>, mem  ;<span class="comment">(reg16)</span><-<span class="comment">(mem)</-<span></span>  <span class="comment">(es)</span><-<span class="comment">((mem)<span class="number">+2</span>)<br></-<span></pre></td></tr></tbody></table></figure><p></p>
+<p>LDS和LES分为一类，都是取地址指代的内容；而LEA传送的就是地址。</p>
+<p>四、标志传送指令<br>8086CPU有四条</p>
+<ul>
+<li>lahf</li>
+<li>sahf</li>
+<li>popf</li>
+</ul>
+<p>psw（program status word，程序状态字）是标志寄存器或者说状态寄存器的简写。</p>
+<p>（1）lahf（load AH into flags）<br>功能：(ah)<-(psw的低8字节)< p>
+<p>（2）sahf（store AH into flags）<br>功能：(psw的低8字节)<-(ah)< p>
+<p>（3）popf（pop flags）<br>功能：标志出栈<br>(psw)<-((sp)+1)<br>(sp)<-(sp)+2< p>
+<h1 id="算数运算指令"><a href="#算数运算指令" class="headerlink" title="算数运算指令"></a>算数运算指令</h1><p>包括：加法指令、减法指令、乘法指令、除法指令</p>
+<ol>
+<li>加法指令<br>8086CPU有5条加法指令</li>
+</ol>
+<ul>
+<li>add（addition），加法指令</li>
+<li>adc（add with carry），带位加法</li>
+<li>inc（increment），自增</li>
+<li>aaa（ASCII adjust for addition）</li>
+<li>daa（decimal adjust for addition）</li>
+</ul>
+<p>（1）add ast, src<br>(dst) <- (dst) + (src)<br>add指令的源操作数和目的操作数不能同时为存储器，也不能为段寄存器。<br>add指令影响标志位：</-></p>
+<ul>
+<li>8位有符号数相加，和超出范围（-128~127），或16位有符号数相加，和超出范围（-32786~32767），则O=1</li>
+<li>8位无符号数相加，和超过255，或16位有符号数相加，和超过65535，则C=1</li>
+<li>其它标志（S、A、P、Z）由运算结果按照定义确定</li>
+</ul>
+<blockquote>
+<p>有符号数在计算机中以补码形式存储，当运算结果超过-128时向下溢出为127，反之向上溢出为-127。至于无符号数，没有所谓的溢出问题，只存在逻辑上的进位和借位。</p>
+</blockquote>
+<p>（2）adc dst, src<br>(dst) <- (dst) + (src) c< p>
+<p>C就是标志寄存器进位位的当前值。</p>
+<p>adc指令主要用于多字节运算，如 <code>adc cx, 300</code>，<code>adc al, bl</code>，<code>adc dx, [si]</code></p>
+<p>求和：两个32位数<br>12345678h + 0abcdefabh = ?</p>
+<p>mov ax, 1234h<br>mov bx, 55678h<br>add bx, 0efabh<br>adc ax, 0abcdh</p>
+<p>（3）inc dst<br>(dst) <- (dst) + 1< p>
+<p>inc指令用于在循环程序中修改地址指针和循环次数<br>影响S、Z、A、P、O标志位，不影响C。</p>
+<ol start="2">
+<li>减法指令</li>
+</ol>
+<p>（1）sub dst, src<br>(dst) <- (dst) - (src)< p>
+<p>（2）sbb dst, src<br>(dst) < (dst) - (src) -1</p>
+<p>（3）dec dst<br>(dst) <- (dst) - 1< p>
+<p>减法指令类比加法指令即可。</p>
+<p>（4）neg dst（求补指令）<br>(dst) <- 0 - (dst)<br>neg指令把操作数按位求反后末位加1。<br>影响标志位：A、C、O、P、S、Z。</-></p>
+<p>（5）比较指令<br>比较指令用来比较两个数之间的关系</p>
+<ul>
+<li>根据Z，判断两个数是否相等</li>
+<li>根据C，判断两个无符号数的大小关系</li>
+<li>根据S、O，判断两个有符号数的大小关系</li>
+</ul>
+<ol start="3">
+<li>乘法指令</li>
+</ol>
+<p>（1）mul src（无符号乘法）<br>字节操作：ax <- (al) x (src)<br>字操作    ：dx:ax <- (ax) x (src)< p>
+<p>（2）imul src（带符号乘法）<br>同mul，但操作数均带符号。按有符号数的规则相乘。</p>
+<ol start="4">
+<li>除法指令</li>
+</ol>
+<p>（1）div src（无符号除法）<br>字节操作：al <- (ax) (src)<br>      ah <- (ax) (src)<br>字操作    ：ax <- (dx:ax) (src)之商<br>      dx <- (dx:ax) (src)之余数< p>
+<p>（2）idiv（带符号除法）<br>同div，但操作数均带符号。按有符号数的规则相除。</p>
+<p>（3）字节扩展指令（cwb）<br>格式：cbw  ;convert byte to word<br>功能：将al字节扩展成字，符号位及高字节在ah中。</p>
+<p>（4）字扩展指令（cwd）<br>格式：cwd  ;convert word to double word<br>功能：将ax扩展成双字，符号位及高位字在dx中。</p>
+<p>这两条指令是对被除数al或ax进行扩展。</p>
+<h1 id="位操作类指令"><a href="#位操作类指令" class="headerlink" title="位操作类指令"></a>位操作类指令</h1><p>一、逻辑运算指令</p>
+<ol>
+<li><p>AND<br>按位“与”<br>格式：and dst, src<br>功能：按位与，当且仅当两操作数对应位都是1时，对应位置1，否则置0。</p>
+</li>
+<li><p>TEST（测试指令）<br>同AND，但是结果不保存。仅用来改变标志位。</p>
+</li>
+<li><p>OR<br>按位“或”<br>格式：or dst, src<br>功能：按位或，当且仅当两操作数对应位都是0时，对应位置0，否则置1。</p>
+</li>
+<li><p>XOR<br>“异或”指令<br>格式：xor dst, src<br>功能：对应位，不同置1，相同置0。</p>
+</li>
+<li><p>NOT<br>按位取反<br>格式：not dst<br>操作：按位取反<br>not指令的dst不能是立即数，可以是寄存器或存储器。</p>
+</li>
+</ol>
+<p>二、移位指令</p>
+<ul>
+<li>SAL（Shift Arithmetic Left），算数左移</li>
+<li>SAR（Shift Arithmetic Right），算数右移</li>
+<li>SHL（Shift Logical Left），逻辑左移</li>
+<li>SHR（Shift Logocal Right），逻辑右移</li>
+<li>ROL（Rotate Left），循环左移</li>
+<li>ROR（Rotate Right），循环右移</li>
+<li>RCL（Rotate Left），带进位循环左移</li>
+<li>RCR（Roate Right），带进位循环右移</li>
+</ul>
+<p>移位指令的格式<br></p><figure class="highlight hsp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">操作码 reg/mem, <span class="keyword">cnt</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>cnt可以是立即数，也可以是寄存器（保存cnt的值）<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">shl</span> <span class="number">ah</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">sal</span>, sl, <span class="built_in">cl</span></span><br><span class="line"><span class="keyword">sal</span> <span class="built_in">word</span> <span class="built_in">ptr</span> [<span class="built_in">bx</span>+<span class="number">5</span>]</span><br><span class="line"><span class="keyword">rol</span> <span class="number">bh</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">rol</span> <span class="built_in">dx</span>, <span class="built_in">cl</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>算数移位需要考虑符号位，右移一位若符号位为1则左边补1，否则补零（SAL、SAR）<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="number">ah</span>, <span class="number">3fh</span>	<span class="comment">;(ah)= 0011 1111b</span></span><br><span class="line"><span class="keyword">sal</span> <span class="number">ah</span>, <span class="number">1</span>	<span class="comment">;(ah)=0011 11110b</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">cl</span>, <span class="number">2</span></span><br><span class="line"><span class="keyword">mov</span> <span class="keyword">sal</span> <span class="number">ah</span>, <span class="built_in">cl</span>	<span class="comment">;(ah)=f8h</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>逻辑移位不需要考虑符号位，右移一位左边补零，左移一位右边补零（SHL、SHR）<br>SHR右移的时候，它的最高位用0填补，最低位移入CF<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">shr</span> <span class="built_in">bl</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">shr</span> <span class="built_in">ax</span>, <span class="built_in">cl</span></span><br><span class="line"><span class="keyword">shr</span> <span class="built_in">byte</span> <span class="built_in">ptr</span> [<span class="built_in">di</span>+<span class="built_in">bp</span>], <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>循环移位，左边移出到右边，右边移出到左边<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">al</span>, <span class="number">11110000b</span></span><br><span class="line"><span class="keyword">rol</span> <span class="built_in">al</span>, <span class="number">1</span>	<span class="comment">;循环左移，执行后结果为11100001b，CF=1</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>带进位的循环移位<br>循环左移，进位值（原CF）到低位，高位进CF<br>循环右移，进位制（原CF）到高位，低位进CF<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">al</span>, <span class="number">11110000b</span></span><br><span class="line"><span class="keyword">rcl</span> <span class="built_in">al</span>, <span class="number">1</span>	<span class="comment">;带进位的循环左移，执行后结果为11100000,CF=1</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h1 id="串操作类指令"><a href="#串操作类指令" class="headerlink" title="串操作类指令"></a>串操作类指令</h1><p>“串”就是内存中一段地址和相连的字节或字,“串”操作也称“数据块”操作。<br>可实现存储器数据间的直接传送。8086CPU有5种基本的串操作：</p>
+<ul>
+<li>movs（move string），串传送指令</li>
+<li>cmps（compare string），串比较指令</li>
+<li>scas（scan string），串扫描指令</li>
+<li>lods（load from string），取串指令</li>
+<li>stos（stroe from string），存串指令</li>
+</ul>
+<ol>
+<li>串传送指令</li>
+</ol>
+<p>（1）movs指令<br>传送指令实际上完成了复制操作，将ds:si传送到es:di（将数据段传送到附加段）。<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="number">1000h</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">ds</span>, <span class="built_in">ax</span>	<span class="comment">;数据段地址赋值</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="number">1000h</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">es</span>, <span class="built_in">ax</span>	<span class="comment">;附加段地址赋值</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">si</span>, <span class="number">0013h</span>	<span class="comment">;源数据块首地址</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">di</span>, <span class="number">1003h</span>	<span class="comment">;目的数据块首地址</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">cx</span>, <span class="number">4</span>	<span class="comment">;数据块长度赋值计数器</span></span><br><span class="line"><span class="keyword">std</span>		<span class="comment">;将方向位DF置1，由高地址和向地地址传送</span></span><br><span class="line"><span class="symbol">lp:</span><span class="keyword">movsb</span>	<span class="comment">;完成一个字节数据传送</span></span><br><span class="line">  <span class="keyword">dec</span> <span class="built_in">cx</span>	<span class="comment">;计数器减一</span></span><br><span class="line">  <span class="keyword">jnz</span> lp	<span class="comment">;cx不为0，继续传送（ZF位仅受CX寄存器影响）</span></span><br><span class="line"><span class="keyword">hlt</span>		<span class="comment">;中断</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<blockquote>
+<p>上面循环部分可用rep指令进行简化。当(cx)≠0时，(cx)<-(cx)-1，并执行rep指令后的串指令；当(cx)=0时，结束rep，执行下一条指令。< p>
+</-(cx)-1，并执行rep指令后的串指令；当(cx)=0时，结束rep，执行下一条指令。<></p></blockquote>
+<p>（2）loads指令<br>将si指定的数据段中某单元内容赋给al或ax</p>
+<ul>
+<li>loadsb（字节）：(al) <- (ds:si), (si) <- + 1< li>
+<li>loadsw（字）：(ax) <- (ds:si), (si) <- + 2< li>
+</-></li></-></li></ul>
+<p>（3）stores指令<br>与rep重复指令连用时，可以用来建立一串相同的值，串长度由cx内容决定</p>
+<ul>
+<li>storesb（字节）：(es:di) <- (al), (di) <- + 1< li>
+<li>storesw（字）：(es:di) <- (ax), (di) <- + 2< li>
+</-></li></-></li></ul>
+<p>（4）cmps指令<br>比较(es:di)-(ds:si)。结果不存，置标志。<br>cmpsb（字节）：(si) <- (si) ± 1, (di) <- + 1<br>cmpsw（字）：(si) <- (si) ± 2, (di) <- 2< p>
+<p>（5）scas指令<br>将di执行数据段中某单元内容赋给al或ax</p>
+<ul>
+<li>scasb（字节）：(al) <- (es:di), (di) <- ± 1< li>
+<li>scasw（字）：(ax) <- (es:di), (di) <- ± 2< li>
+</-></li></-></li></ul>
+<h1 id="程序控制类指令"><a href="#程序控制类指令" class="headerlink" title="程序控制类指令"></a>程序控制类指令</h1><p>一、转移指令<br>转移指令控制程序从一处转换到另一处执行。在CPU内部，转移是通过将目标地址传送给IP来实现的</p>
+<p>转移指令包括：</p>
+<ul>
+<li>无条件转移指令（jmp，谐音jump）</li>
+<li>条件转移指令（5类）</li>
+</ul>
+<p>（1）无条件转移指令jmp<br></p><figure class="highlight avrasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">jmp</span> 语句标号</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>（2）条件转移指令</p>
+<p>根据flag的值，判断是否跳转</p>
+<p>① Z标志<br></p><figure class="highlight livecodeserver"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jz	;jump <span class="keyword">if</span> <span class="literal">zero</span></span><br><span class="line">jnz	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="literal">zero</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>② C标志<br></p><figure class="highlight mipsasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">jc	</span><span class="comment">;jump if carry</span></span><br><span class="line"><span class="keyword">jnc	</span><span class="comment">;jump if not carry</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>③ P标志<br></p><figure class="highlight fortran"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jp	;jump <span class="keyword">if</span> <span class="built_in">parity</span></span><br><span class="line">jnp	;jump <span class="keyword">if</span> not <span class="built_in">parity</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>④ S标志<br></p><figure class="highlight gams"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">js	;jump <span class="keyword">if</span> <span class="keyword">negative</span></span><br><span class="line">jns	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">negative</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>⑤ O标志<br></p><figure class="highlight arduino"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jo	;jump <span class="built_in">if</span> <span class="built_in">overflow</span></span><br><span class="line">jno	;jump <span class="built_in">if</span> <span class="keyword">not</span> <span class="built_in">overflow</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>根据两个无符号数大小关系转移</p>
+<blockquote>
+<p>判断两个数的大小，这需要同时考虑多个标志位，如jle跳转条件为 “ZF=1 OR SF≠OF”，你可以先用cmp指令判断两个数的大小，这会影响标志位的值，接着下一行条件跳转利用这个结果。</p>
+</blockquote>
+<figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jb	;jump <span class="keyword">if</span> <span class="keyword">below</span></span><br><span class="line">jnae	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">above</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jnb	;jump <span class="keyword">if</span> <span class="keyword">below</span></span><br><span class="line">jae	;jump <span class="keyword">if</span> <span class="keyword">above</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jbe	;jump <span class="keyword">if</span> <span class="keyword">below</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jna	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">above</span></span><br><span class="line">jnbe	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">below</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">ja	;jump <span class="keyword">if</span> <span class="keyword">above</span></span><br></pre></td></tr></tbody></table></figure>
+<p>根据两个有符号数大小关系转移</p>
+<figure class="highlight cmake"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jl	;jump <span class="keyword">if</span> <span class="keyword">less</span></span><br><span class="line">jnge	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">greater</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jnl	;jump <span class="keyword">if</span> <span class="keyword">less</span></span><br><span class="line">jge	;jump <span class="keyword">if</span> <span class="keyword">greater</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jle	;jump <span class="keyword">if</span> <span class="keyword">less</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jng	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">greater</span></span><br><span class="line">jnle	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">less</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jg	;jump <span class="keyword">if</span> <span class="keyword">greater</span></span><br></pre></td></tr></tbody></table></figure>
+<blockquote>
+<p><strong>注意：所有的条件转移指令都是段内（-128~+127）转移</strong></p>
+</blockquote>
+<p>二、过程调用指令</p>
+<ul>
+<li>call</li>
+<li>ret、retn、retf</li>
+</ul>
+<p>三、循环控制指令</p>
+<p>（1）loop（无条件循环）<br>首先(cx) <- (cx) - 1，若 cx ≠ 0，转向目标地址继续执行，否则执行loop后的指令。< p>
+<p>（2）条件循环指令</p>
+<ul>
+<li>looppz、looppe</li>
+<li>loopnz、loopne<br>第一行两条指令的效果一样，都是先cx自减1，判断cx是否为0，还要判断ZF位是否为1，若cx≠0且z=1，则跳转，当cx或zf=0时，循环结束。<br>第二行和第一行相比，cx效果不变，ZF为0时才跳转。</li>
+</ul>
+<p>四、中断指令（interrupt）</p>
+<p>（1）中断调用：int n  ;n是中断号，0~255<br>（2）中断返回：iret</p>
+<p>五、处理器控制类指令</p>
+<p>（1）标志处理指令<br></p><figure class="highlight sqf"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">clc	;clear carry <span class="built_in">flag</span></span><br><span class="line">stc	;<span class="built_in">set</span> carry <span class="built_in">flag</span></span><br><span class="line">cmc	;complement carry <span class="built_in">flag</span></span><br><span class="line">cld	;clear <span class="built_in">direction</span> <span class="built_in">flag</span></span><br><span class="line">std	;<span class="built_in">set</span> <span class="built_in">direction</span> <span class="built_in">flag</span></span><br><span class="line">cli	;clear interrupt <span class="built_in">flag</span></span><br><span class="line">sti	;<span class="built_in">set</span> interrupt enable <span class="built_in">flag</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>（2）其它处理机控制指令<br></p><figure class="highlight mipsasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">nop	</span><span class="comment">;no operation</span></span><br><span class="line">hlt	<span class="comment">;cpu halt</span></span><br><span class="line"><span class="keyword">wait	</span><span class="comment">;cpu wait</span></span><br><span class="line">lock	<span class="comment">;bus lock</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </-></p></-></-></p></-></-></-></-></p></-></-></p></-></p></-></p></-></p></-></p></-(sp)+2<></-((sp)+1)<br></p></-(ah)<></p></-(psw的低8字节)<></p></div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+     
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/汇编复习（一）.html" rel="prev" title="协程（一）">
+                <i class="fa fa-chevron-left"></i> 协程（一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/汇编复习（一）.html" rel="next" title="汇编复习（一）">
+                汇编复习（一） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="celestialalpha">
+            
+              <p class="site-author-name" itemprop="name">celestialalpha</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2NlbGVzdGlhbGFscGhh" title="GitHub &rarr; https://github.com/celestialalpha"><i class="fa fa-fw fa-github"></i>GitHub</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="bWFpbHRvOmNlbGVzdGlhbGNvZGVAb3V0bG9vay5jb20=" title="E-Mail &rarr; mailto:celestialcode@outlook.com"><i class="fa fa-fw fa-envelope"></i>E-Mail</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FiY18xMjM2Ng==" title="CSDN &rarr; https://blog.csdn.net/abc_12366"><i class="fa fa-fw fa-globe"></i>CSDN</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cDovL3dlaWJvLmNvbS9jZWxlc3RpYWxhbHBoYQ==" title="Weibo &rarr; http://weibo.com/celestialalpha"><i class="fa fa-fw fa-weibo"></i>Weibo</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS9jZWxlc3RpYWxjb2Rh" title="Twitter &rarr; https://twitter.com/celestialcoda"><i class="fa fa-fw fa-twitter"></i>Twitter</span>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <span class="exturl" data-url="aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2NlbGVzdGlhbGNvZGE=" title="Facebook &rarr; https://www.facebook.com/celestialcoda"><i class="fa fa-fw fa-facebook"></i>Facebook</span>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#汇编指令"><span class="nav-text">汇编指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#寻址方式"><span class="nav-text">寻址方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据传送指令"><span class="nav-text">数据传送指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算数运算指令"><span class="nav-text">算数运算指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#位操作类指令"><span class="nav-text">位操作类指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#串操作类指令"><span class="nav-text">串操作类指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#程序控制类指令"><span class="nav-text">程序控制类指令</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-yin-yang"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">celestialalpha</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <span class="exturl theme-link" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <span class="exturl theme-link" data-url="aHR0cHM6Ly90aGVtZS1uZXh0Lm9yZw==">NexT.Muse</span> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+  <script src="/js/exturl.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
