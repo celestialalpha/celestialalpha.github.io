@@ -427,7 +427,11 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             {% if post.prev %}
+<<<<<<< HEAD
               <a href="{{ url_for(post.next.path) }}" rel="prev" title="{{ post.prev.title }}">
+=======
+              <a href="{{ url_for(post.prev.path) }}" rel="prev" title="{{ post.prev.title }}">
+>>>>>>> 164f706ac17a9cb6d5fd153fb9ae840c85a0f381
                 <i class="fa fa-chevron-left"></i> {{ post.prev.title }}
               </a>
             {% endif %}
