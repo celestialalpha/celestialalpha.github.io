@@ -136,19 +136,19 @@
 
 
 
-  <meta name="description" content="与此相关的两个文件  /lib/systemd/system/xxx（√） /etc/init.d/xxx.service（×）">
+  <meta name="description" content="与此相关的两个文件  /etc/init.d/xxx.service（✘） /lib/systemd/system/xxx（✔）">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="编写自己的Linux Service">
 <meta property="og:url" content="https://celestialcode.xyz/编写自己的Linux-Service.html">
 <meta property="og:site_name" content="Celestialalpha">
-<meta property="og:description" content="与此相关的两个文件  /lib/systemd/system/xxx（√） /etc/init.d/xxx.service（×）">
+<meta property="og:description" content="与此相关的两个文件  /etc/init.d/xxx.service（✘） /lib/systemd/system/xxx（✔）">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://celestialcode.xyz/uploads/beef-xss-service.png">
-<meta property="og:updated_time" content="2019-05-20T10:28:02.527Z">
+<meta property="og:updated_time" content="2019-08-03T10:15:29.966Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="编写自己的Linux Service">
-<meta name="twitter:description" content="与此相关的两个文件  /lib/systemd/system/xxx（√） /etc/init.d/xxx.service（×）">
+<meta name="twitter:description" content="与此相关的两个文件  /etc/init.d/xxx.service（✘） /lib/systemd/system/xxx（✔）">
 <meta name="twitter:image" content="https://celestialcode.xyz/uploads/beef-xss-service.png">
 
 
@@ -430,12 +430,24 @@
                 
               
 
-              <time title="创建时间：2019-05-20 17:35:16 / 修改时间：18:28:02" itemprop="dateCreated datePublished" datetime="2019-05-20T17:35:16+08:00">2019-05-20</time>
+              <time title="创建时间：2019-05-20 17:35:16" itemprop="dateCreated datePublished" datetime="2019-05-20T17:35:16+08:00">2019-05-20</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-03 18:15:29" itemprop="dateModified" datetime="2019-08-03T18:15:29+08:00">2019-08-03</time>
               
             
           </span>
@@ -489,10 +501,11 @@
       
         <p>与此相关的两个文件</p>
 <ul>
-<li>/lib/systemd/system/xxx（√）</li>
-<li>/etc/init.d/xxx.service（×）<a id="more"></a>
-</li>
+<li>/etc/init.d/xxx.service（✘）</li>
+<li>/lib/systemd/system/xxx（✔）</li>
 </ul>
+<a id="more"></a>
+
 <p>Linux操作系统的启动首先从BIOS开始，接下来进入boot loader，并由其载入内核进行初始化。内核初始化的第一步就是启动pid为1的进程，这个进程是系统的第一个进程，它负责产生其他所有用户进程。init以守护进程方式存在，是其它进程的祖先。</p>
 <p>以前，绝大多数Linux发行版服务都遵循sysvinit风格。比如Ubuntu、Kali。如今systemd正在逐渐取代sysvinit。它使用unit文件进行服务控制。</p>
 <ul>
@@ -560,8 +573,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/【老物】MS-HTA格式.html" rel="next" title="【老物】MS-HTA格式">
-                【老物】MS-HTA格式 <i class="fa fa-chevron-right"></i>
+              <a href="/MS-HTA格式.html" rel="next" title="MS-HTA格式">
+                MS-HTA格式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

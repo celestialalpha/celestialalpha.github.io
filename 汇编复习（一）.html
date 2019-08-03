@@ -499,7 +499,8 @@
       
 
       
-        <p><img src="/uploads/assembly-languagemasm-x8086.jpg" alt><br><a id="more"></a></p>
+        <p><img src="/uploads/assembly-languagemasm-x8086.jpg" alt></p>
+<a id="more"></a>
 <h1 id="汇编"><a href="#汇编" class="headerlink" title="汇编"></a>汇编</h1><p>汇编语言（assembly language）是一种用于电子计算机、微处理器、微控制电路或其它可编程器件的低级语言，亦称为符号语言。在汇编语言中，用助记符（Mnemonics）代替机器指令的操作码，用地址符号（Symbol）或标号（Label）代替指令或操作数的地址。在不同的设备中，汇编语言对应着不同的机器语言指令集，通过汇编过程转换成机器指令。普遍地说，特定的汇编语言和特定的机器语言指令集是一一对应的，不同平台之间不可直接移植。</p>
 <h1 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h1><p>进制即进位计算制，是人为定义的带进位的计数方法。<br>在早期设计的机械计算装置中，使用的还不是二进制，而是十进制或其它进制，利用齿轮的不同位置表示不同的数值，这种计算装置更加接近人类的思维方式。但是随着计算量的增加，随着电子电路的发展，二进制的优越性便逐渐凸显。使用二进制机器码，可以很方便的描述电路的各种状态，以及它们组合产生的不同逻辑门。</p>
 <p>使用二级制的好处：</p>
@@ -544,8 +545,12 @@
 <li>只修改IP（段内转移），比如 <code>jmp ax</code></li>
 <li>同时修改CS:IP（段间转移），比如 <code>jmp 3:0B13</code></li>
 </ul>
-<h1 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h1><p>计算机根据<strong>物理地址</strong>对代码进行定位。<br></p><figure class="highlight fix"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">物理地址 </span>=<span class="string"> 基础地址 + 偏移地址</span></span><br><span class="line"><span class="string">	 = 基础地址 + 段地址x10H</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p><strong>逻辑地址</strong>从应用程序角度看待内存。其形式为<br></p><figure class="highlight makefile"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">段基地址:段内偏移地址</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<h1 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h1><p>计算机根据<strong>物理地址</strong>对代码进行定位。</p>
+<figure class="highlight fix"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">物理地址 </span>=<span class="string"> 基础地址 + 偏移地址</span></span><br><span class="line"><span class="string">	 = 基础地址 + 段地址x10H</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>逻辑地址</strong>从应用程序角度看待内存。其形式为</p>
+<figure class="highlight makefile"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">段基地址:段内偏移地址</span></span><br></pre></td></tr></tbody></table></figure>
+
 <p>将逻辑地址左移4位，加上偏移地址就得到20位物理地址。<br>比如：逻辑地址1234:100 -> 物理地址12400。左移四位就是一个十六进制进位。</p>
 <h1 id="标志寄存器"><a href="#标志寄存器" class="headerlink" title="标志寄存器"></a>标志寄存器</h1><p>标志寄存器的命名，总是某F的形式（xx flag）。8086CPU的几个标志位如下。<br>（标志寄存器是一个整体，其中CF、OF等都是它上面的某个bit位）</p>
 <ul>

@@ -497,13 +497,16 @@
       
 
       
-        <p><img src="/uploads/gaitubao_680x360_WordItOut-word-cloud-3710871.jpg" alt><br><a id="more"></a></p>
+        <p><img src="/uploads/gaitubao_680x360_WordItOut-word-cloud-3710871.jpg" alt></p>
+<a id="more"></a>
 <h1 id="汇编指令"><a href="#汇编指令" class="headerlink" title="汇编指令"></a>汇编指令</h1><p>汇编指令由两部分组成</p>
 <ul>
 <li>操作码</li>
 <li>操作数</li>
 </ul>
-<p>其中操作码必须有，而操作数可以有一个或两个，也可以没有。<br>零操作数指令或一个的，另外的操作数是隐含的。比如push指令，<br></p><figure class="highlight armasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">push </span><span class="keyword">bx	</span><span class="comment">;将栈顶的值推到bx中，栈顶的值就是另一个隐含的操作数</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>其中操作码必须有，而操作数可以有一个或两个，也可以没有。<br>零操作数指令或一个的，另外的操作数是隐含的。比如push指令，</p>
+<figure class="highlight armasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">push </span><span class="keyword">bx	</span><span class="comment">;将栈顶的值推到bx中，栈顶的值就是另一个隐含的操作数</span></span><br></pre></td></tr></tbody></table></figure>
+
 <h1 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h1><p>寻址的意思是，寻找操作数所存放的位置（地址）。<br>一共有<strong>7种寻址方式，它们是：</strong></p>
 <ul>
 <li><p>立即数寻址</p>
@@ -530,11 +533,13 @@
 </li>
 <li><p>相对基址加变址寻址<br>在4-基址加变址的基础上，再加上一个偏移量。</p>
 <figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> [<span class="built_in">bx</span>+<span class="built_in">di</span>+<span class="number">1234h</span>], <span class="number">ah</span>  <span class="comment">;[bx+di+1234h]=dsx10h+bx+di+1234h</span></span><br></pre></td></tr></tbody></table></figure>
+
 </li>
 </ol>
 <h1 id="数据传送指令"><a href="#数据传送指令" class="headerlink" title="数据传送指令"></a>数据传送指令</h1><p>一、 通用传送指令</p>
 <ol>
 <li>基本传送指令mov<figure class="highlight armasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov </span>dst src</span><br></pre></td></tr></tbody></table></figure>
+
 </li>
 </ol>
 <p>所有传送指令都不影响标志寄存器的标志位。</p>
@@ -549,8 +554,12 @@
 <ol start="2">
 <li>堆栈指令push和pop<br>堆栈：<strong>后进先出</strong>（Last In First Out）<br><img src="/uploads/stack_view.jpg" alt="堆栈"></li>
 </ol>
-<p>压栈<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">push</span> <span class="built_in">bx</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>出栈<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pop</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">ax</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>压栈</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">push</span> <span class="built_in">bx</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>出栈</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">pop</span></span><br><span class="line"><span class="keyword">pop</span> <span class="built_in">ax</span></span><br></pre></td></tr></tbody></table></figure>
+
 <p>堆栈的作用：</p>
 <ul>
 <li>存放寄存器或存储器中暂时不用的数据，需要时可方便的弹出</li>
@@ -565,7 +574,9 @@
 <li>寄存器和寄存器的xchg</li>
 <li>寄存器和存储器的xchg</li>
 </ul>
-<p>公式<br></p><figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xchg dst, src  ;<span class="comment">(dst)</span> <-> <span class="comment">(src)</span></-></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>公式</p>
+<figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xchg dst, src  ;<span class="comment">(dst)</span> <-> <span class="comment">(src)</span></-></span><br></pre></td></tr></tbody></table></figure>
+
 <p>存储器之间不能直接交换<br>段寄存器不能作为操作数<br>允许字或字节操作</p>
 <p>二、累加器专用传送指令</p>
 <ol>
@@ -574,6 +585,7 @@
 </li>
 <li><p>输出指令OUT<br>用于CPU向外设备端口发送数据</p>
 <figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">out</span> data8, <span class="built_in">al</span>  <span class="comment">;向8位地址端口输出一个字节</span></span><br><span class="line"><span class="keyword">out</span> data8, <span class="built_in">ax</span>  <span class="comment">;向8位地址端口输出一个字</span></span><br><span class="line"><span class="keyword">out</span> <span class="built_in">dx</span>, <span class="built_in">al</span>  <span class="comment">;向16位地址端口输出一个字节</span></span><br><span class="line"><span class="keyword">out</span> <span class="built_in">dx</span>, <span class="built_in">ax</span>  <span class="comment">;向16位地址端口输出一个字</span></span><br></pre></td></tr></tbody></table></figure>
+
 </li>
 </ol>
 <p>三、目的地址传送指令</p>
@@ -583,13 +595,19 @@
 <li>lds（取数据内容）</li>
 <li>les（取数据内容）</li>
 </ul>
-<p>（1）lea（load effective address）<br>功能：将源操作数的偏移地址传送到目的操作数<br></p><figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lea re<span class="name">g16</span>, mem  ;注：re<span class="name">g16</span>指<span class="number">16</span>位通用寄存器，和上面data<span class="number">8</span>一样，都是简写。</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>（1）lea（load effective address）<br>功能：将源操作数的偏移地址传送到目的操作数</p>
+<figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lea re<span class="name">g16</span>, mem  ;注：re<span class="name">g16</span>指<span class="number">16</span>位通用寄存器，和上面data<span class="number">8</span>一样，都是简写。</span><br></pre></td></tr></tbody></table></figure>
+
 <p>设(bx)=0400h，(si)=003ch，<code>lea bx, [bx+si+0f62h]</code><br>执行指令后，源操作数地址为(bx)+(si)+0f62h=0400h+003ch+0f62h=139eh<br>则(bx)=139eh</p>
-<p>（2）lds（load pointer using DS）<br>功能：将源操作数指定的4个相继字节的数据分别传送到指令指定的寄存器和ds中<br></p><figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lds re<span class="name">g16</span>, mem  ;<span class="comment">(reg16)</span><-<span class="comment">(mem)</-<span></span>  <span class="comment">(ds)</span><-<span class="comment">((mem)<span class="number">+2</span>)<br></-<span></pre></td></tr></tbody></table></figure><p></p>
+<p>（2）lds（load pointer using DS）<br>功能：将源操作数指定的4个相继字节的数据分别传送到指令指定的寄存器和ds中</p>
+<figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lds re<span class="name">g16</span>, mem  ;<span class="comment">(reg16)</span><-<span class="comment">(mem)</-<span></span>  <span class="comment">(ds)</span><-<span class="comment">((mem)<span class="number">+2</span>)<br></-<span></pre></td></tr></tbody></table></figure>
+
 <p>如 <code>lds si, [0010h]</code>，设(ds)=0c00h，数据在内存中分布情况如下</p>
 <p>偏移地址    0010h    c0011h    c0012h    c0013h<br>数据内容    80h    01h    00h    20h</p>
 <p>则指令执行后，(si)=0180h，(di)=2000h</p>
-<p>（3）les（load pointer using ES）<br>类比LDS。<br></p><figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">les re<span class="name">g16</span>, mem  ;<span class="comment">(reg16)</span><-<span class="comment">(mem)</-<span></span>  <span class="comment">(es)</span><-<span class="comment">((mem)<span class="number">+2</span>)<br></-<span></pre></td></tr></tbody></table></figure><p></p>
+<p>（3）les（load pointer using ES）<br>类比LDS。</p>
+<figure class="highlight gcode"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">les re<span class="name">g16</span>, mem  ;<span class="comment">(reg16)</span><-<span class="comment">(mem)</-<span></span>  <span class="comment">(es)</span><-<span class="comment">((mem)<span class="number">+2</span>)<br></-<span></pre></td></tr></tbody></table></figure>
+
 <p>LDS和LES分为一类，都是取地址指代的内容；而LEA传送的就是地址。</p>
 <p>四、标志传送指令<br>8086CPU有四条</p>
 <ul>
@@ -614,7 +632,7 @@
 </ul>
 <p>（1）add ast, src<br>(dst) <- (dst) + (src)<br>add指令的源操作数和目的操作数不能同时为存储器，也不能为段寄存器。<br>add指令影响标志位：</-></p>
 <ul>
-<li>8位有符号数相加，和超出范围（-128~127），或16位有符号数相加，和超出范围（-32786~32767），则O=1</li>
+<li>8位有符号数相加，和超出范围（-128<del>127），或16位有符号数相加，和超出范围（-32786</del>32767），则O=1</li>
 <li>8位无符号数相加，和超过255，或16位有符号数相加，和超过65535，则C=1</li>
 <li>其它标志（S、A、P、Z）由运算结果按照定义确定</li>
 </ul>
@@ -679,12 +697,24 @@
 <li>RCL（Rotate Left），带进位循环左移</li>
 <li>RCR（Roate Right），带进位循环右移</li>
 </ul>
-<p>移位指令的格式<br></p><figure class="highlight hsp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">操作码 reg/mem, <span class="keyword">cnt</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>cnt可以是立即数，也可以是寄存器（保存cnt的值）<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">shl</span> <span class="number">ah</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">sal</span>, sl, <span class="built_in">cl</span></span><br><span class="line"><span class="keyword">sal</span> <span class="built_in">word</span> <span class="built_in">ptr</span> [<span class="built_in">bx</span>+<span class="number">5</span>]</span><br><span class="line"><span class="keyword">rol</span> <span class="number">bh</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">rol</span> <span class="built_in">dx</span>, <span class="built_in">cl</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>算数移位需要考虑符号位，右移一位若符号位为1则左边补1，否则补零（SAL、SAR）<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="number">ah</span>, <span class="number">3fh</span>	<span class="comment">;(ah)= 0011 1111b</span></span><br><span class="line"><span class="keyword">sal</span> <span class="number">ah</span>, <span class="number">1</span>	<span class="comment">;(ah)=0011 11110b</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">cl</span>, <span class="number">2</span></span><br><span class="line"><span class="keyword">mov</span> <span class="keyword">sal</span> <span class="number">ah</span>, <span class="built_in">cl</span>	<span class="comment">;(ah)=f8h</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>逻辑移位不需要考虑符号位，右移一位左边补零，左移一位右边补零（SHL、SHR）<br>SHR右移的时候，它的最高位用0填补，最低位移入CF<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">shr</span> <span class="built_in">bl</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">shr</span> <span class="built_in">ax</span>, <span class="built_in">cl</span></span><br><span class="line"><span class="keyword">shr</span> <span class="built_in">byte</span> <span class="built_in">ptr</span> [<span class="built_in">di</span>+<span class="built_in">bp</span>], <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>循环移位，左边移出到右边，右边移出到左边<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">al</span>, <span class="number">11110000b</span></span><br><span class="line"><span class="keyword">rol</span> <span class="built_in">al</span>, <span class="number">1</span>	<span class="comment">;循环左移，执行后结果为11100001b，CF=1</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>带进位的循环移位<br>循环左移，进位值（原CF）到低位，高位进CF<br>循环右移，进位制（原CF）到高位，低位进CF<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">al</span>, <span class="number">11110000b</span></span><br><span class="line"><span class="keyword">rcl</span> <span class="built_in">al</span>, <span class="number">1</span>	<span class="comment">;带进位的循环左移，执行后结果为11100000,CF=1</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>移位指令的格式</p>
+<figure class="highlight hsp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">操作码 reg/mem, <span class="keyword">cnt</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>cnt可以是立即数，也可以是寄存器（保存cnt的值）</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">shl</span> <span class="number">ah</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">sal</span>, sl, <span class="built_in">cl</span></span><br><span class="line"><span class="keyword">sal</span> <span class="built_in">word</span> <span class="built_in">ptr</span> [<span class="built_in">bx</span>+<span class="number">5</span>]</span><br><span class="line"><span class="keyword">rol</span> <span class="number">bh</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">rol</span> <span class="built_in">dx</span>, <span class="built_in">cl</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>算数移位需要考虑符号位，右移一位若符号位为1则左边补1，否则补零（SAL、SAR）</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="number">ah</span>, <span class="number">3fh</span>	<span class="comment">;(ah)= 0011 1111b</span></span><br><span class="line"><span class="keyword">sal</span> <span class="number">ah</span>, <span class="number">1</span>	<span class="comment">;(ah)=0011 11110b</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">cl</span>, <span class="number">2</span></span><br><span class="line"><span class="keyword">mov</span> <span class="keyword">sal</span> <span class="number">ah</span>, <span class="built_in">cl</span>	<span class="comment">;(ah)=f8h</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>逻辑移位不需要考虑符号位，右移一位左边补零，左移一位右边补零（SHL、SHR）<br>SHR右移的时候，它的最高位用0填补，最低位移入CF</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">shr</span> <span class="built_in">bl</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">shr</span> <span class="built_in">ax</span>, <span class="built_in">cl</span></span><br><span class="line"><span class="keyword">shr</span> <span class="built_in">byte</span> <span class="built_in">ptr</span> [<span class="built_in">di</span>+<span class="built_in">bp</span>], <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>循环移位，左边移出到右边，右边移出到左边</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">al</span>, <span class="number">11110000b</span></span><br><span class="line"><span class="keyword">rol</span> <span class="built_in">al</span>, <span class="number">1</span>	<span class="comment">;循环左移，执行后结果为11100001b，CF=1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>带进位的循环移位<br>循环左移，进位值（原CF）到低位，高位进CF<br>循环右移，进位制（原CF）到高位，低位进CF</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">al</span>, <span class="number">11110000b</span></span><br><span class="line"><span class="keyword">rcl</span> <span class="built_in">al</span>, <span class="number">1</span>	<span class="comment">;带进位的循环左移，执行后结果为11100000,CF=1</span></span><br></pre></td></tr></tbody></table></figure>
+
 <h1 id="串操作类指令"><a href="#串操作类指令" class="headerlink" title="串操作类指令"></a>串操作类指令</h1><p>“串”就是内存中一段地址和相连的字节或字,“串”操作也称“数据块”操作。<br>可实现存储器数据间的直接传送。8086CPU有5种基本的串操作：</p>
 <ul>
 <li>movs（move string），串传送指令</li>
@@ -696,7 +726,9 @@
 <ol>
 <li>串传送指令</li>
 </ol>
-<p>（1）movs指令<br>传送指令实际上完成了复制操作，将ds:si传送到es:di（将数据段传送到附加段）。<br></p><figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="number">1000h</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">ds</span>, <span class="built_in">ax</span>	<span class="comment">;数据段地址赋值</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="number">1000h</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">es</span>, <span class="built_in">ax</span>	<span class="comment">;附加段地址赋值</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">si</span>, <span class="number">0013h</span>	<span class="comment">;源数据块首地址</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">di</span>, <span class="number">1003h</span>	<span class="comment">;目的数据块首地址</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">cx</span>, <span class="number">4</span>	<span class="comment">;数据块长度赋值计数器</span></span><br><span class="line"><span class="keyword">std</span>		<span class="comment">;将方向位DF置1，由高地址和向地地址传送</span></span><br><span class="line"><span class="symbol">lp:</span><span class="keyword">movsb</span>	<span class="comment">;完成一个字节数据传送</span></span><br><span class="line">  <span class="keyword">dec</span> <span class="built_in">cx</span>	<span class="comment">;计数器减一</span></span><br><span class="line">  <span class="keyword">jnz</span> lp	<span class="comment">;cx不为0，继续传送（ZF位仅受CX寄存器影响）</span></span><br><span class="line"><span class="keyword">hlt</span>		<span class="comment">;中断</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>（1）movs指令<br>传送指令实际上完成了复制操作，将ds:si传送到es:di（将数据段传送到附加段）。</p>
+<figure class="highlight x86asm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="number">1000h</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">ds</span>, <span class="built_in">ax</span>	<span class="comment">;数据段地址赋值</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">ax</span>, <span class="number">1000h</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">es</span>, <span class="built_in">ax</span>	<span class="comment">;附加段地址赋值</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">si</span>, <span class="number">0013h</span>	<span class="comment">;源数据块首地址</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">di</span>, <span class="number">1003h</span>	<span class="comment">;目的数据块首地址</span></span><br><span class="line"><span class="keyword">mov</span> <span class="built_in">cx</span>, <span class="number">4</span>	<span class="comment">;数据块长度赋值计数器</span></span><br><span class="line"><span class="keyword">std</span>		<span class="comment">;将方向位DF置1，由高地址和向地地址传送</span></span><br><span class="line"><span class="symbol">lp:</span><span class="keyword">movsb</span>	<span class="comment">;完成一个字节数据传送</span></span><br><span class="line">  <span class="keyword">dec</span> <span class="built_in">cx</span>	<span class="comment">;计数器减一</span></span><br><span class="line">  <span class="keyword">jnz</span> lp	<span class="comment">;cx不为0，继续传送（ZF位仅受CX寄存器影响）</span></span><br><span class="line"><span class="keyword">hlt</span>		<span class="comment">;中断</span></span><br></pre></td></tr></tbody></table></figure>
+
 <blockquote>
 <p>上面循环部分可用rep指令进行简化。当(cx)≠0时，(cx)<-(cx)-1，并执行rep指令后的串指令；当(cx)=0时，结束rep，执行下一条指令。< p>
 </-(cx)-1，并执行rep指令后的串指令；当(cx)=0时，结束rep，执行下一条指令。<></p></blockquote>
@@ -722,21 +754,35 @@
 <li>无条件转移指令（jmp，谐音jump）</li>
 <li>条件转移指令（5类）</li>
 </ul>
-<p>（1）无条件转移指令jmp<br></p><figure class="highlight avrasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">jmp</span> 语句标号</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>（1）无条件转移指令jmp</p>
+<figure class="highlight avrasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">jmp</span> 语句标号</span><br></pre></td></tr></tbody></table></figure>
+
 <p>（2）条件转移指令</p>
 <p>根据flag的值，判断是否跳转</p>
-<p>① Z标志<br></p><figure class="highlight livecodeserver"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jz	;jump <span class="keyword">if</span> <span class="literal">zero</span></span><br><span class="line">jnz	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="literal">zero</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>② C标志<br></p><figure class="highlight mipsasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">jc	</span><span class="comment">;jump if carry</span></span><br><span class="line"><span class="keyword">jnc	</span><span class="comment">;jump if not carry</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>③ P标志<br></p><figure class="highlight fortran"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jp	;jump <span class="keyword">if</span> <span class="built_in">parity</span></span><br><span class="line">jnp	;jump <span class="keyword">if</span> not <span class="built_in">parity</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>④ S标志<br></p><figure class="highlight gams"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">js	;jump <span class="keyword">if</span> <span class="keyword">negative</span></span><br><span class="line">jns	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">negative</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>⑤ O标志<br></p><figure class="highlight arduino"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jo	;jump <span class="built_in">if</span> <span class="built_in">overflow</span></span><br><span class="line">jno	;jump <span class="built_in">if</span> <span class="keyword">not</span> <span class="built_in">overflow</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>① Z标志</p>
+<figure class="highlight livecodeserver"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jz	;jump <span class="keyword">if</span> <span class="literal">zero</span></span><br><span class="line">jnz	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="literal">zero</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>② C标志</p>
+<figure class="highlight mipsasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">jc	</span><span class="comment">;jump if carry</span></span><br><span class="line"><span class="keyword">jnc	</span><span class="comment">;jump if not carry</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>③ P标志</p>
+<figure class="highlight fortran"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jp	;jump <span class="keyword">if</span> <span class="built_in">parity</span></span><br><span class="line">jnp	;jump <span class="keyword">if</span> not <span class="built_in">parity</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>④ S标志</p>
+<figure class="highlight gams"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">js	;jump <span class="keyword">if</span> <span class="keyword">negative</span></span><br><span class="line">jns	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">negative</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>⑤ O标志</p>
+<figure class="highlight arduino"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jo	;jump <span class="built_in">if</span> <span class="built_in">overflow</span></span><br><span class="line">jno	;jump <span class="built_in">if</span> <span class="keyword">not</span> <span class="built_in">overflow</span></span><br></pre></td></tr></tbody></table></figure>
+
 <p>根据两个无符号数大小关系转移</p>
 <blockquote>
 <p>判断两个数的大小，这需要同时考虑多个标志位，如jle跳转条件为 “ZF=1 OR SF≠OF”，你可以先用cmp指令判断两个数的大小，这会影响标志位的值，接着下一行条件跳转利用这个结果。</p>
 </blockquote>
 <figure class="highlight applescript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jb	;jump <span class="keyword">if</span> <span class="keyword">below</span></span><br><span class="line">jnae	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">above</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jnb	;jump <span class="keyword">if</span> <span class="keyword">below</span></span><br><span class="line">jae	;jump <span class="keyword">if</span> <span class="keyword">above</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jbe	;jump <span class="keyword">if</span> <span class="keyword">below</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jna	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">above</span></span><br><span class="line">jnbe	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">below</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">ja	;jump <span class="keyword">if</span> <span class="keyword">above</span></span><br></pre></td></tr></tbody></table></figure>
+
 <p>根据两个有符号数大小关系转移</p>
 <figure class="highlight cmake"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jl	;jump <span class="keyword">if</span> <span class="keyword">less</span></span><br><span class="line">jnge	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">greater</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jnl	;jump <span class="keyword">if</span> <span class="keyword">less</span></span><br><span class="line">jge	;jump <span class="keyword">if</span> <span class="keyword">greater</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jle	;jump <span class="keyword">if</span> <span class="keyword">less</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jng	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">greater</span></span><br><span class="line">jnle	;jump <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">less</span> <span class="keyword">or</span> <span class="keyword">equal</span></span><br><span class="line">jg	;jump <span class="keyword">if</span> <span class="keyword">greater</span></span><br></pre></td></tr></tbody></table></figure>
+
 <blockquote>
 <p><strong>注意：所有的条件转移指令都是段内（-128~+127）转移</strong></p>
 </blockquote>
@@ -755,8 +801,12 @@
 <p>四、中断指令（interrupt）</p>
 <p>（1）中断调用：int n  ;n是中断号，0~255<br>（2）中断返回：iret</p>
 <p>五、处理器控制类指令</p>
-<p>（1）标志处理指令<br></p><figure class="highlight sqf"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">clc	;clear carry <span class="built_in">flag</span></span><br><span class="line">stc	;<span class="built_in">set</span> carry <span class="built_in">flag</span></span><br><span class="line">cmc	;complement carry <span class="built_in">flag</span></span><br><span class="line">cld	;clear <span class="built_in">direction</span> <span class="built_in">flag</span></span><br><span class="line">std	;<span class="built_in">set</span> <span class="built_in">direction</span> <span class="built_in">flag</span></span><br><span class="line">cli	;clear interrupt <span class="built_in">flag</span></span><br><span class="line">sti	;<span class="built_in">set</span> interrupt enable <span class="built_in">flag</span></span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>（2）其它处理机控制指令<br></p><figure class="highlight mipsasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">nop	</span><span class="comment">;no operation</span></span><br><span class="line">hlt	<span class="comment">;cpu halt</span></span><br><span class="line"><span class="keyword">wait	</span><span class="comment">;cpu wait</span></span><br><span class="line">lock	<span class="comment">;bus lock</span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>（1）标志处理指令</p>
+<figure class="highlight sqf"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">clc	;clear carry <span class="built_in">flag</span></span><br><span class="line">stc	;<span class="built_in">set</span> carry <span class="built_in">flag</span></span><br><span class="line">cmc	;complement carry <span class="built_in">flag</span></span><br><span class="line">cld	;clear <span class="built_in">direction</span> <span class="built_in">flag</span></span><br><span class="line">std	;<span class="built_in">set</span> <span class="built_in">direction</span> <span class="built_in">flag</span></span><br><span class="line">cli	;clear interrupt <span class="built_in">flag</span></span><br><span class="line">sti	;<span class="built_in">set</span> interrupt enable <span class="built_in">flag</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>（2）其它处理机控制指令</p>
+<figure class="highlight mipsasm"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">nop	</span><span class="comment">;no operation</span></span><br><span class="line">hlt	<span class="comment">;cpu halt</span></span><br><span class="line"><span class="keyword">wait	</span><span class="comment">;cpu wait</span></span><br><span class="line">lock	<span class="comment">;bus lock</span></span><br></pre></td></tr></tbody></table></figure>
+
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
