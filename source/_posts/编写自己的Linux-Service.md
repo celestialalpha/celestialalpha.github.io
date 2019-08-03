@@ -6,8 +6,9 @@ tags: Linux
 categories: 电脑技巧
 ---
 与此相关的两个文件
-- /lib/systemd/system/xxx（√）
-- /etc/init.d/xxx.service（×）
+- /etc/init.d/xxx.service（✘）
+- /lib/systemd/system/xxx（✔）
+
 <!-- more -->
 
 Linux操作系统的启动首先从BIOS开始，接下来进入boot loader，并由其载入内核进行初始化。内核初始化的第一步就是启动pid为1的进程，这个进程是系统的第一个进程，它负责产生其他所有用户进程。init以守护进程方式存在，是其它进程的祖先。

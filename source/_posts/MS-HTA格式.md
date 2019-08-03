@@ -1,5 +1,5 @@
 ---
-title: 【老物】MS-HTA格式
+title: MS-HTA格式
 top: false
 date: 2019-05-07 22:02:43
 tags: HTA病毒
